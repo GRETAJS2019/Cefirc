@@ -18,7 +18,6 @@ const routes: Routes = [
       { path: 'choix', component: ChoixFormationComponent }
     ]
   },
-
 ];
 
 @NgModule({
