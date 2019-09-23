@@ -1,0 +1,102 @@
+.container{
+    margin-top:8%;
+}
+
+
+.iconOpenAsset i {
+    font-size:60px;
+    color:white;
+    cursor: pointer;
+}
+
+
+.assets{
+    position:absolute;
+    left:0px;
+    top:20%
+}
+
+.assetsBody{
+    /*position:absolute;
+    left:0;*/
+    padding-bottom:35px;
+}
+
+.assetsBody i {
+    font-size:60px;
+    color:black;
+    cursor: pointer;
+   padding-left:5px;
+   margin-top:30px;
+/*
+    margin-left:-50px;
+   */
+}
+
+
+/* Carousel icon taille */
+
+.carousel-control-next .fas, .carousel-control-prev .fas{
+    font-size:3em;
+    color:black
+}
+
+
+  .carousel-inner {
+    height: auto;
+  }
+  
+  .carousel-control-next {
+    right: -150px;
+  }
+
+  .carousel-control-prev {
+    left: -150px;
+  }
+
+ 
+  .carousel-control-next, .carousel-control-prev{
+    top: 50%;
+    bottom: 50%;
+}
+
+#myCarousel{
+    margin-left:60px;
+}
+#myCarousel .list-inline {
+    white-space:nowrap;
+    overflow-x:auto;
+}
+
+#myCarousel .carousel-indicators {
+    position: static;
+    left: initial;
+    width: initial;
+    margin-left: initial;
+}
+
+#myCarousel .carousel-indicators > li {
+    width: initial;
+    height: initial;
+    text-indent: initial;
+}
+
+
+.carousel-indicators img{
+    width:150px;
+}
+
+.carousel-item img{
+    z-index:1;
+    height: 40vw;
+    width:100vw;
+}
+
+
+
+.aa
+{
+    background-color:transparent!important;
+    opacity:1!important;
+    z-index:100!important
+}

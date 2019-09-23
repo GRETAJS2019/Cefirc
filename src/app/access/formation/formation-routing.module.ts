@@ -9,15 +9,23 @@ import { ChoixFormationComponent } from './choix-formation/choix-formation.compo
 
 const routes: Routes = [
   {
-    path: '', component: VueGeneraleComponent,
-    children: [
+  //  path: '', component: VueGeneraleComponent,
+  path: 'choix', component: ChoixFormationComponent,
+  
+   /* children: [
       { path: 'enchainements', component: EnchainnementComponent },
       { path: 'quiz', component: QuizComponent },
       { path: 'resultat', component: ResultatComponent },
       { path: 'slide', component: SlideComponent },
-      { path: 'choix', component: ChoixFormationComponent }
-    ]
+      { path: 'vue-generale', component: VueGeneraleComponent },
+     // { path: 'choix', component: ChoixFormationComponent }
+    ]*/
   },
+  { path: 'enchainements', component: EnchainnementComponent },
+  { path: 'quiz', component: QuizComponent },
+  { path: 'resultat', component: ResultatComponent },
+  { path: 'slide', component: SlideComponent },
+  { path: 'vue-generale', component: VueGeneraleComponent },
 ];
 
 @NgModule({

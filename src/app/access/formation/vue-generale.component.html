@@ -1,3 +1,110 @@
-<p>vue-generale works!</p>
+<!-- <p>vue-generale works!</p>
 <router-outlet></router-outlet>
+-->
 
+<div class="vueGenerale"   >
+    <div class="vueGeneraleImg">
+    </div>
+</div>
+
+
+<div class="vueGenerale " [@openClose]="slideOuvert == true ? 'open' : 'closed'"  >
+   <div *ngIf="slideOuvert">
+        <div class="slideDown">
+            <i class="fas fa-arrow-alt-circle-down" (click)="slideDown($event)"></i>
+        </div>
+   </div>
+
+   <div *ngIf="!slideOuvert">
+        <div class="slideDown">
+            <i class="fas fa-arrow-alt-circle-up" (click)="slideDown($event)"></i>
+        </div>
+       </div>
+
+    <div class="Formations" *ngIf="slideOuvert">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="card" routerLink="../enchainements" >
+                        <img src="../../../../assets/images/scenario/1.jpg" class="img-fluid">
+                        <div class="card-body blocFormation" >
+                            <h4 class="card-title text-center text-uppercase" >Scenario 1</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card">
+
+                        <img src="../../../../assets/images/scenario/2.jpg" class="img-fluid">
+                        <div class="card-body blocFormation">
+                            <h4 class="card-title text-center text-uppercase">Scenario 2</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card" >
+
+                        <img src="../../../../assets/images/scenario/3.jpg" class="img-fluid">
+                        <div class="card-body blocFormation">
+                            <h4 class="card-title text-center text-uppercase">Scenario 3</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="card" >
+
+                        <img src="../../../../assets/images/scenario/4.jpg" class="img-fluid">
+                        <div class="card-body blocFormation">
+                            <h4 class="card-title text-center text-uppercase">Scenario 4</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row mt-5">
+                <div class="col-3">
+                    <div class="card" >
+
+                        <img src="../../../../assets/images/scenario/5.jpg" class="img-fluid">
+                        <div class="card-body blocFormation">
+                            <h4 class="card-title text-center text-uppercase">Scenario 5</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="card" >
+
+                        <img src="../../../../assets/images/scenario/1.jpg" class="img-fluid">
+                        <div class="card-body blocFormation">
+                            <h4 class="card-title text-center text-uppercase">Scenario 6</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="card">
+                        <img src="../../../../assets/images/scenario/4.jpg" class="img-fluid">
+                        <div class="card-body blocFormation">
+                            <h4 class="card-title text-center text-uppercase">Scenario 7</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <div class="card" >
+
+                        <img src="../../../../assets/images/scenario/1.jpg" class="img-fluid">
+                        <div class="card-body blocFormation">
+                            <h4 class="card-title text-center text-uppercase">Scenario 8</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>

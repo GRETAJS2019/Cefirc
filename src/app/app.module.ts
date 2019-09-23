@@ -10,13 +10,12 @@ import { ProfilComponent } from './profil/profil.component';
   declarations: [
     AppComponent,
     LoginComponent,
-    ProfilComponent
+    ProfilComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]

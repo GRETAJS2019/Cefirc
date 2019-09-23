@@ -1,0 +1,53 @@
+.vueGenerale{
+    position:relative;
+    height:100vh;
+    z-index:1;
+
+}
+
+
+.vueGeneraleImg{
+    height:95vh;
+    background: url(../../../assets/images/3D/1.jpg);
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
+}
+
+
+.slideDown{
+    text-align: center;
+}
+
+
+.slideDown i {
+    font-size:45px;
+    cursor:pointer;
+    position:relative;
+    top:-25px;
+}
+
+.Formations{
+    display:flex;
+    height:85vh;
+    align-items: center;
+}
+
+.card-body {
+    color:#283c83;
+    padding:0px;
+}
+
+.inactive{
+    display:none!important;
+}
+
+.active{
+    display:block!important;
+}
+
+.wrapper{
+    height:100vh;
+    background-color:white;
+}
+
+
