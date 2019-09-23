@@ -6,7 +6,7 @@ import { EspacePersoComponent } from './espace-perso/espace-perso.component';
 import { ListProfilComponent } from './list-profil/list-profil.component';
 
 const routes: Routes = [
-  {path:'', component: AdminComponent,
+  {path:'', component: ListProfilComponent,
   children:[
     {path:'editProfil', component:EditProfilComponent},
     {path:'espacePerso', component:EspacePersoComponent},

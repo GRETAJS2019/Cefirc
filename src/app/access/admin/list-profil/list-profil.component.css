@@ -1,0 +1,114 @@
+#listeContainer{
+    background : #FFFFFF;
+    height: 80vh;
+    margin: auto;
+    width: 90vw;
+}
+ul{
+    list-style: none;
+    margin : 0px;
+    padding: 0px;
+}
+/* --- Liste Nav --- */
+#listNav{
+    background:#D6D6D6;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+}
+#listNav ul {
+    display: flex;
+}
+#listNav ul li{
+    height: 40px;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px;
+}
+#listNav ul li.listSelected{
+    background: #FFFFFF;
+}
+#listNav input{
+    border:#8D8D8D 1px solid;
+    border-radius : 5px;
+    margin : 10px;
+    padding-left: 10px;
+    width: 350px;
+}
+#listNav input::placeholder{
+    color: #8D8D8D;
+}
+
+/* --- Liste Formateurs  ---*/
+#listContent{
+    padding: 20px;
+}
+#listContentHeader{
+    background:#b5b5b5;
+    border-bottom: #585858 1px solid;
+    box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.50);
+    color:#000000;
+    font-size: 1.1em;
+    padding : 10px 0px;
+    position: relative;
+    z-index: 5;
+}
+#listContentHeader span{
+    padding: 10px;
+}
+#listContent ul{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 60vh;
+}
+#listContent ul li{
+    background : #D6D6D6 ;
+    color:#5D5D5D;
+    font-size: 1.1em;
+    
+}
+#listContent ul li:nth-child(2n){
+    background : #F6F6F6;
+}
+
+/* --- Liste Formateurs  ---*/
+#listContentHeader, #listContent ul li{
+    display:flex;
+}
+p{
+    padding : 0px 10px;
+}
+#listContentHeader p:first-child, #listContent ul li p:first-child{
+    width : 15vw;
+}
+#listContentHeader p:nth-child(2), #listContent ul li p:nth-child(2){
+    width : 20vw;
+}
+#listContentHeader p:nth-child(3), #listContent ul li p:nth-child(3){
+    width : 10vw;
+}
+#listContentHeader p:nth-child(4), #listContent ul li p:nth-child(4){
+    width : 15vw;
+}
+
+/* --- Scrollbar --- */
+::-webkit-scrollbar {
+    width: 20px;
+}
+::-webkit-scrollbar-track {
+    background: #D6D6D6; 
+    border: 1px solid #B6B6B6;
+    width: 10px!important;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #5d5d5d80; 
+    border: 1px solid #6e6e6e;
+
+}
+::-webkit-scrollbar-thumb {
+    background-color: #f1f1f1;
+    background-clip: content-box;
+    border: 1px solid #B6B6B6;
+    border-radius: 9px;
+    box-shadow: 0px 0px 15px 0px #929292;
+}
