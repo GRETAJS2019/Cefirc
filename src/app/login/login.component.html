@@ -1,1 +1,54 @@
-<p>login works!</p>
+<div class="body">
+
+    <div class='switch'>
+        <div [@openClose]="open == false ? 'btnBeforeSwitch' : 'btnAfterSwitch'">
+            <input id="radio-e" type="radio" name="third-switch" (click)="outside()" checked="checked" />
+            <input id="radio-f" type="radio" name="third-switch" (click)="clickedButton()" />
+            <span class="toggle-outside toggle"><span class="toggle-inside toggle "></span></span>
+        </div>
+    </div>
+
+
+
+    <img id="cefircIMG" src="../../assets/logo-cefirc-igta-centre-formation.svg" alt="">
+
+    <form class="container" #formulaire="ngForm" (ngSubmit)="submitted(formulaire)">
+
+        <div [ngClass]="open == false ? 'none' : 'animated fadeIn' ">
+            
+            <label for="username"><b></b></label>
+            <input id="user" type="text" placeholder="Nom d'Utilisatur"  name="userName" pattern="^[a-zA-Z]+$" [(ngModel)]="userName" #user="ngModel" required>
+            
+            <br />
+
+            <label for="password"><b></b></label>
+            
+            <input  id="mdp" type="password" placeholder="Mot de Passe" name="password" value="secret" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" [(ngModel)]="password" #pass="ngModel" required>
+
+            <br />
+            
+            <p style="color:red">{{errorMessage}}</p>
+
+        </div>
+
+        <div class="btn" > <button     [@openClose]="open == false ? 'btnBeforeConnexion' : 'btnAfterConnexion'"
+                class="btn btn-link">CONNEXION</button></div>
+        <br />
+        
+
+        <div [@openClose]="open == false ? 'hidden' : 'show'">
+            <label id="souvientmdp"><input type="checkbox" checked="checked" name="remember"> se souvenir de
+                moi</label>
+        </div>
+        <p id="infoMdp"></p>
+
+        <br />
+
+        <div class="containerOublieMDP" [@openClose]="open == false ? 'hidden' : 'show'">
+            <span><a href="#">&ensp;&ensp;mot de passe oublié ?</a></span>
+        </div>
+
+    </form>
+
+</div>
+
