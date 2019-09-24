@@ -1,71 +1,70 @@
-
-
 <div class="body">
-        
-        <img id="cefircIMG" src="../../assets/logo-cefirc-igta-centre-formation.svg" alt="">
 
-    <div class='switch'>
-        <div [@openClose]="open == false ? 'btnBeforeSwitch' : 'btnAfterSwitch'">
-            <input id="radio-e" type="radio" name="third-switch" (click)="outside()" checked="checked" />
-            <input id="radio-f" type="radio" name="third-switch" (click)="clickedButton()" />
-            <span class="toggle-outside toggle"><span class="toggle-inside toggle "></span></span>
-        </div>
+  <img id="cefircIMG" src="../../assets/logo-cefirc-igta-centre-formation.svg" alt="">
+
+  <div class='switch'>
+    <div [@openClose]="open == false ? 'btnBeforeSwitch' : 'btnAfterSwitch'">
+      <input id="radio-e" type="radio" name="third-switch" (click)="outside()" checked="checked" />
+      <input id="radio-f" type="radio" name="third-switch" (click)="clickedButton()" />
+      <span class="toggle-outside toggle"><span class="toggle-inside toggle "></span></span>
+    </div>
+  </div>
+
+
+  <form class="container" #formulaire="ngForm" (ngSubmit)="submitted(formulaire)">
+
+    <div [ngClass]="open == false ? 'none' : 'do' ">
+      <!--animated fadeIn-->
+
+      <label for="username"><b></b></label>
+      <input id="user" type="text" placeholder="Nom d'Utilisateur" name="userName" pattern="^[a-zA-Z]+$"
+        [(ngModel)]="userName" #user="ngModel" required>
+
+      <br />
+
+      <label for="password"></label>
+      <input id="mdp" type="{{type}}" placeholder="Mot de Passe" name="password" value=""
+        pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" [(ngModel)]="password" #pass="ngModel" required>
+      <input id="check" type="checkbox" (click)="showed()">
+
+      <br />
+
+      <p>{{errorMessage}}</p>
+
+
+    </div>
+
+    <div class="btn"> <button [@openClose]="open == false ? 'btnBeforeConnexion' : 'btnAfterConnexion'"
+        class="btn btn-link">CONNEXION</button></div>
+    <br />
+
+    <div [@openClose]="open == false ? 'hidden' : 'show'">
+      <label id="souvientmdp">
+        <input type="checkbox" checked="checked" name="remember"> Se souvenir de
+        moi</label>
+    </div>
+
+    <br />
+
+    <div class="containerOublieMDP" [@openClose]="open == false ? 'hidden' : 'show'">
+      <span><a href="#">&ensp;&ensp;mot de passe oublié ?</a></span>
     </div>
 
 
-    <form class="container" #formulaire="ngForm" (ngSubmit)="submitted(formulaire)">
-
-        <div [ngClass]="open == false ? 'none' : 'do' "> <!--animated fadeIn-->
-            
-            <label for="username"><b></b></label>
-            <input id="user" type="text" placeholder="Nom d'Utilisatur"  name="userName" pattern="^[a-zA-Z]+$" [(ngModel)]="userName" #user="ngModel" required>
-            
-            <br />
-
-            <label for="password"></label>
-            <input  id="mdp" type="{{type}}" placeholder="Mot de Passe" name="password" value="" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" [(ngModel)]="password" #pass="ngModel" required>
-            <input id="check" type="checkbox" (click)="showed()"> 
-            
-            <br />
-
-            <p>{{errorMessage}}</p>
 
 
-        </div>
 
-        <div class="btn" > <button     [@openClose]="open == false ? 'btnBeforeConnexion' : 'btnAfterConnexion'"
-                class="btn btn-link">CONNEXION</button></div>
-        <br />
-        
-        <div [@openClose]="open == false ? 'hidden' : 'show'">
-                <label id="souvientmdp">
-                <input type="checkbox" checked="checked" name="remember"> Se souvenir de
-                moi</label>
-        </div>
-
-        <br />
-
-        <div class="containerOublieMDP" [@openClose]="open == false ? 'hidden' : 'show'">
-            <span><a href="#">&ensp;&ensp;mot de passe oublié ?</a></span>
-        </div>
-
-
-  
-
-
-    </form>
+  </form>
 
 </div>
 
 <script>
-
-function myFunction() {
+  function myFunction() {
     var x = document.getElementById("mdp");
-      if (document.getElementById("check").checked) {
-         mdp.setAttribute ('type','text');
-      } else {
-            mdp.setAttribute ('type','password');
-      }
+    if (document.getElementById("check").checked) {
+      mdp.setAttribute('type', 'text');
+    } else {
+      mdp.setAttribute('type', 'password');
+    }
   }
-    
 </script>

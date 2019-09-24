@@ -1,11 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition,
-} from '@angular/animations';
+import {trigger,state,style,animate,transition} from '@angular/animations';
 import { Router } from '@angular/router';
 
 @Component({
@@ -38,7 +32,7 @@ import { Router } from '@angular/router';
         state('btnBeforeConnexion', style({
          marginTop: '100px',
         })),
-        
+
 
       /** Transition Switch */
          transition('btnBeforeSwitch => btnAfterSwitch', [
@@ -62,7 +56,7 @@ import { Router } from '@angular/router';
         ]),
         transition('btnAfter => btnBefore', [
           animate('1s')
-        ]),     
+        ]),
     ]),
   ]
 })
@@ -83,7 +77,7 @@ export class LoginComponent implements OnInit {
    }else{
      this.router.navigate(['/access'])
    }
-    
+
   }
 
   clickedButton(){
@@ -101,7 +95,7 @@ export class LoginComponent implements OnInit {
     }else{
       this.type = 'password'
     }
-    
+
   }
- 
+
 }
