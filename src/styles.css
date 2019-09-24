@@ -1,5 +1,77 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&display=auto');
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=auto');
 
-body{
-    height: 100%;
-    background-color: rgb(40, 60, 131);}
+* {
+    margin: 0px;
+    padding: 1.2%;
+}
+
+body {
+    background: url(assets/images/Logo_Cefirc.png) fixed no-repeat;
+    background-size: 15em;
+    background-position-y: 4%;
+    background-position-x: 4%; 
+    background-color: #283C83;
+}
+
+
+/*///////FONTSTYLES\\\\\\\\\*/
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-size: 60px;
+}
+
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    color: whitesmoke;
+    font-size: 40px;
+}
+
+h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    color: whitesmoke;
+    font-size: 28px;
+    text-transform: uppercase
+}
+
+h4 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    color: whitesmoke;
+    font-size: 18px;
+    text-transform: uppercase
+}
+
+h5 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    color: whitesmoke;
+    font-size: 18px;
+}
+
+h6 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    color: whitesmoke;
+    font-size: 16px;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color : whitesmoke;
+}
+
+a {
+    text-decoration: none;
+}
+
+
