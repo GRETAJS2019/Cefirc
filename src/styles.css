@@ -1,10 +1,9 @@
-@import "~bootstrap/dist/css/bootstrap.css";  
 @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&display=auto');
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=auto');
 
 * {
     margin: 0px;
-    padding: 1.2%;
+    padding: 0px;
 }
 
 body {

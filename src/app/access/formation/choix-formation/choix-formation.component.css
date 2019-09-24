@@ -1,3 +1,4 @@
+@import "~bootstrap/dist/css/bootstrap.css"; 
 .titre h2{
     color:white;
 }
@@ -58,7 +59,7 @@
 
 input{
     border-radius:none;
-    
+
 }
 
 

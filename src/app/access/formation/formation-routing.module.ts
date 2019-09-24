@@ -9,12 +9,12 @@ import { ChoixFormationComponent } from './choix-formation/choix-formation.compo
 
 const routes: Routes = [
   {
-    path: '', component: VueGeneraleComponent},
+    path: '', component: ChoixFormationComponent},
     { path: 'enchainements', component: EnchainnementComponent },
     { path: 'quiz', component: QuizComponent },
     { path: 'resultat', component: ResultatComponent },
     { path: 'slide', component: SlideComponent },
-    { path: 'choix', component: ChoixFormationComponent }
+    { path: 'vue', component: VueGeneraleComponent}
 ];
 
 @NgModule({

@@ -1,10 +1,10 @@
 nav {
     background: url(../assets/images/Logo_Cefirc.png) no-repeat;
-    background-size: 15em;
+    background-size: 8em;
     background-position-y: 4%;
-    background-position-x: 4%; 
-    height: 90px;
-    
+    background-position-x: 4%;
+    height: 50px;
+
 }
 
 body{
