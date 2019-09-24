@@ -1,19 +1,157 @@
-<p>choix-formation works!</p>
 
-
-
-
-
-
-
-
-
-<h1>Ceci est un H1</h1>
-<h2>Ceci est un H2</h2>
-<h3>Ceci est un H3</h3>
-<h4>Ceci est un H4</h4>
-<h5>Ceci est un H5</h5>
-<h6>Ceci est un H6</h6>
-
-
-<p>Un §(p) Lorem ipsum dolore est ut visit humerum lodem estiam</p>
+<div class="container">
+        <div class="row ">
+            <div class="col col-xs-12">
+                <div class="titre">
+                    <h2 class="text-uppercase text-center mt-3 ">Choix de Formation</h2>
+                </div>
+            </div>
+        </div>
+    
+        <div class="row mt-5">
+            <div class="col-4 " [ngClass]="espacecommun == false ? 'bloc1' : 'bloc1false' ">
+                <a (click)="espacecommun = false" style="cursor:pointer">
+                    <h4 class="text-uppercase text-center ">Espace Personnel</h4>
+                </a>
+            </div>
+            <div class="col-4  bloc2" [ngClass]="espacecommun ? 'bloc2true' : '' ">
+                <a (click)="espacecommun = true" style="cursor:pointer">
+                    <h4 class="text-uppercase text-center">Espace commun</h4>
+                </a>
+            </div>
+            <div class="col-4">
+                <input type="text" class="form-control" placeholder="Rechercher">
+            </div>
+        </div>
+    
+    
+        <!-- Premier block -->
+        <div class="espace" *ngIf="!espacecommun ">
+            <div class="row blocs">
+                <div class="col-4">
+                    <div class="card" routerLink="../vue-generale">
+                        <img src="../../../../assets/images/formations/fac1.jpg" class="img-fluid">
+                        <div class="card-body blocFormation">
+                            <h4 class="card-title text-center">Formation No 1</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <img src="../../../../assets/images/formations/fac2.jpg" class="img-fluid">
+                        <div class="card-body blocFormation">
+                            <h4 class="card-title text-center">Formation No 2</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <img src="../../../../assets/images/formations/fac3.jpg" class="img-fluid">
+                        <div class="card-body blocFormation">
+                            <h4 class="card-title text-center">Formation No 3</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Deuxième block -->
+            <div class="row blocs mt-3">
+                <div class="col-4">
+                    <div class="card">
+                        <img src="../../../../assets/images/formations/fac4.jpg" class="img-fluid">
+                        <div class="card-body blocFormation">
+                            <h4 class="card-title text-center">Formation No 4</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <img src="../../../../assets/images/formations/fac4.jpg" class="img-fluid">
+                        <div class="card-body blocFormation">
+                            <h4 class="card-title text-center">Formation No 5</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <img src="../../../../assets/images/formations/fac4.jpg" class="img-fluid">
+                        <div class="card-body blocFormation">
+                            <h4 class="card-title text-center">Formation No 6</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+    
+        <!--Espace COMMUN -->
+    
+        <!-- Premier block -->
+        <div class="espace" *ngIf="espacecommun ">
+            <div class="row blocs">
+                    <div class="col-4">
+                            <div class="card">
+                                <img src="../../../../assets/images/formations/fac2.jpg" class="img-fluid">
+                                <div class="card-body blocFormation">
+                                    <h4 class="card-title text-center">Formation No 2</h4>
+                                </div>
+                            </div>
+                        </div>
+                <div class="col-4">
+                        <div class="card" routerLink="../vue-generale">
+                            <img src="../../../../assets/images/formations/fac1.jpg" class="img-fluid">
+                            <div class="card-body blocFormation">
+                                <h4 class="card-title text-center">Formation No 1</h4>
+                            </div>
+                        </div>
+                    </div>
+               
+                <div class="col-4">
+                    <div class="card">
+                        <img src="../../../../assets/images/formations/fac3.jpg" class="img-fluid">
+                        <div class="card-body blocFormation">
+                            <h4 class="card-title text-center">Formation No 3</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Deuxième block -->
+            <div class="row blocs mt-3">
+                <div class="col-4">
+                    <div class="card">
+                        <img src="../../../../assets/images/formations/fac4.jpg" class="img-fluid">
+                        <div class="card-body blocFormation">
+                            <h4 class="card-title text-center">Formation No 4</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                        <div class="card">
+                            <img src="../../../../assets/images/formations/fac4.jpg" class="img-fluid">
+                            <div class="card-body blocFormation">
+                                <h4 class="card-title text-center">Formation No 6</h4>
+                            </div>
+                        </div>
+                    </div>
+                <div class="col-4">
+                    <div class="card">
+                        <img src="../../../../assets/images/formations/fac4.jpg" class="img-fluid">
+                        <div class="card-body blocFormation">
+                            <h4 class="card-title text-center">Formation No 5</h4>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    
+    
+    
+    
+    
+    
+        <h1 class="text-warning">Pagination</h1>
+    </div>
+    

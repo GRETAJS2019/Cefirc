@@ -8,6 +8,8 @@ import { SlideComponent } from './slide/slide.component';
 import { EnchainnementComponent } from './enchainnement/enchainnement.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { ResultatComponent } from './resultat/resultat.component';
+import { DragDropModule } from '@angular/cdk/drag-drop'
+import { AjoutClassDirective } from 'src/app/ajout-class.directive';
 
 @NgModule({
   declarations: [
@@ -16,10 +18,13 @@ import { ResultatComponent } from './resultat/resultat.component';
   SlideComponent,
   EnchainnementComponent,
   QuizComponent,
-  ResultatComponent],
+  ResultatComponent,
+  AjoutClassDirective
+],
   imports: [
     CommonModule,
-    FormationRoutingModule
+    FormationRoutingModule,
+    DragDropModule,
   ]
 })
 export class FormationModule { }
