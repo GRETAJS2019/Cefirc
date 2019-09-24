@@ -1,0 +1,58 @@
+
+#cefircIMG{
+    position: absolute;
+    top: 25px;
+    margin-left: 15px;
+    width: 15%;
+  }
+.text{
+    position: absolute;
+    margin-top: -200px;
+}
+  h1{
+      text-align: center;
+      color: #D6D6D6;
+      font-family: 'Lato', sans-serif;
+      font-size: 60px;
+  }
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20%;
+}
+.icons{
+    width: 300px;
+}
+
+a {
+    text-decoration: none;
+    color: #D6D6D6;
+    font-family: 'Lato', sans-serif;
+    font-size: 26px;
+}
+
+#icon-formation{
+    width: 290px;
+}
+
+.formation a{
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    line-height: 110px;
+}
+
+.edition a{
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    line-height: 100px;
+}
+
+.admin a{
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    line-height: 100px;
+}
