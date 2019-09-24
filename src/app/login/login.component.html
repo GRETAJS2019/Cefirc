@@ -1,4 +1,8 @@
+
+
 <div class="body">
+        
+        <img id="cefircIMG" src="../../assets/logo-cefirc-igta-centre-formation.svg" alt="">
 
     <div class='switch'>
         <div [@openClose]="open == false ? 'btnBeforeSwitch' : 'btnAfterSwitch'">
@@ -9,25 +13,23 @@
     </div>
 
 
-
-    <img id="cefircIMG" src="../../assets/logo-cefirc-igta-centre-formation.svg" alt="">
-
     <form class="container" #formulaire="ngForm" (ngSubmit)="submitted(formulaire)">
 
-        <div [ngClass]="open == false ? 'none' : 'animated fadeIn' ">
+        <div [ngClass]="open == false ? 'none' : 'do' "> <!--animated fadeIn-->
             
             <label for="username"><b></b></label>
             <input id="user" type="text" placeholder="Nom d'Utilisatur"  name="userName" pattern="^[a-zA-Z]+$" [(ngModel)]="userName" #user="ngModel" required>
             
             <br />
 
-            <label for="password"><b></b></label>
+            <label for="password"></label>
+            <input  id="mdp" type="{{type}}" placeholder="Mot de Passe" name="password" value="" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" [(ngModel)]="password" #pass="ngModel" required>
+            <input id="check" type="checkbox" (click)="showed()"> 
             
-            <input  id="mdp" type="password" placeholder="Mot de Passe" name="password" value="secret" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" [(ngModel)]="password" #pass="ngModel" required>
-
             <br />
-            
-            <p style="color:red">{{errorMessage}}</p>
+
+            <p>{{errorMessage}}</p>
+
 
         </div>
 
@@ -35,12 +37,11 @@
                 class="btn btn-link">CONNEXION</button></div>
         <br />
         
-
         <div [@openClose]="open == false ? 'hidden' : 'show'">
-            <label id="souvientmdp"><input type="checkbox" checked="checked" name="remember"> se souvenir de
+                <label id="souvientmdp">
+                <input type="checkbox" checked="checked" name="remember"> Se souvenir de
                 moi</label>
         </div>
-        <p id="infoMdp"></p>
 
         <br />
 
@@ -48,7 +49,23 @@
             <span><a href="#">&ensp;&ensp;mot de passe oublié ?</a></span>
         </div>
 
+
+  
+
+
     </form>
 
 </div>
 
+<script>
+
+function myFunction() {
+    var x = document.getElementById("mdp");
+      if (document.getElementById("check").checked) {
+         mdp.setAttribute ('type','text');
+      } else {
+            mdp.setAttribute ('type','password');
+      }
+  }
+    
+</script>

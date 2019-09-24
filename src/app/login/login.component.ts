@@ -33,10 +33,10 @@ import { Router } from '@angular/router';
 
         /** Bouton Connexion */
         state('btnAfterConnexion', style({
-          marginTop: '80px'
+          marginTop: '0px'
         })),
         state('btnBeforeConnexion', style({
-         marginTop: '10px',
+         marginTop: '100px',
         })),
         
 
@@ -62,20 +62,19 @@ import { Router } from '@angular/router';
         ]),
         transition('btnAfter => btnBefore', [
           animate('1s')
-        ]),
-     
-
-      
+        ]),     
     ]),
   ]
 })
 export class LoginComponent implements OnInit {
   errorMessage = '';
-
+  open:boolean = false;
+  show:boolean = false;
+  type:string = 'password';
   constructor(private router:Router) { }
 
   ngOnInit() {
-
+    console.log("show bool",this.show);
   }
 
   submitted(form){
@@ -87,4 +86,22 @@ export class LoginComponent implements OnInit {
     
   }
 
+  clickedButton(){
+    this.open = true;
+  }
+
+  outside(){
+    this.open = false;
+  }
+
+  showed(){
+    this.show = !this.show
+    if(this.show == true){
+      this.type = 'text'
+    }else{
+      this.type = 'password'
+    }
+    
+  }
+ 
 }
