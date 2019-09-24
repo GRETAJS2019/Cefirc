@@ -1,1 +1,31 @@
-<p>list-profil works!</p>
+<div id="listeContainer">
+    <div id="listNav">
+        <ul>
+            <li class='listSelected'>FORMATEURS</li>
+            <li></li>
+        </ul>
+        <input placeholder="Rechercher">
+        <div id="searchIcon"></div>
+    </div>
+    <div id="listContent">
+        <div id="listContentHeader">
+            <p>Nom</p>
+            <p>Email</p>
+            <p>Téléphone</p>
+            <p>Spécialisation</p>
+        </div>
+        <ul id="listFormateurs">
+            <li *ngFor="let formateur of data">
+                <p>{{formateur.nom}}</p>
+                <p>{{formateur.mail}}</p>
+                <p>{{formateur.tel}}</p>
+                <p>{{formateur.spe}}</p>
+                <div class="listIcons">
+                    <span class="editIcon"></span>
+                    <span class="deleteIcon"></span>
+                </div>
+            </li>
+        </ul>
+        <div id="listContentAdd"></div>
+    </div>
+</div>

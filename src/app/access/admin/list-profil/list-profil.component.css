@@ -1,0 +1,170 @@
+#listeContainer{
+    background : #FFFFFF;
+    height: 80vh;
+    margin: auto;
+    min-width: 1000px;
+    width: 90vw;
+}
+ul{
+    list-style: none;
+    margin : 0px;
+    padding: 0px;
+}
+
+/* --- Liste Nav --- */
+#listNav{
+    background:#D6D6D6;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    position: relative;
+}
+#listNav ul {
+    display: flex;
+}
+#listNav ul li{
+    height: 60px;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px;
+}
+#listNav ul li.listSelected{
+    background: #FFFFFF;
+}
+#listNav input{
+    border:#8D8D8D 1px solid;
+    border-radius : 5px;
+    margin : 10px;
+    padding-left: 40px;
+    width: 350px;
+}
+#listNav input::placeholder{
+    color: #8D8D8D;
+}
+#listNav #searchIcon{
+    background: url('/assets/icons/search.svg') no-repeat;
+    background-size: contain;
+    filter: opacity(40%);
+    height: 25px;
+    right: 315px;
+    position: absolute;
+    top : 17px;
+    width: 35px;
+}
+
+/* --- Liste Formateurs  ---*/
+#listContent{
+    padding: 20px;
+}
+#listContentHeader{
+    background:#b5b5b5;
+    border-bottom: #585858 1px solid;
+    box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.50);
+    color:#000000;
+    font-size: 1.1em;
+    position: relative;
+    z-index: 5;
+}
+#listContentHeader span{
+    padding: 10px;
+}
+#listContent ul{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 60vh;
+}
+#listContent ul li{
+    background : #D6D6D6 ;
+    color:#5D5D5D;
+    font-size: 1.1em;
+}
+#listContent ul li:nth-child(2n){
+    background : #F6F6F6;
+}
+.listIcons span{
+    background-size:contain; 
+    filter: opacity(40%);
+    height: 25px;
+    margin : 15px 10px;
+    transition : 0.4s;
+    width: 25px;
+}
+.listIcons span:hover{
+    cursor:pointer;
+    filter: opacity(100%);
+    transition : 0.4s;
+}
+.deleteIcon{
+    background: url('/assets/icons/bin.svg') no-repeat;
+}
+.editIcon{
+    background: url('/assets/icons/pen.svg') no-repeat;
+}
+#listContentAdd{
+    background: url('/assets/icons/add.svg');
+    background-size:contain; 
+    filter: opacity(40%);
+    height: 25px;
+    margin : 25px auto;
+    transition: 0.4s;
+    width: 25px;
+}
+#listContentAdd:hover{
+    cursor:pointer;
+    filter: opacity(100%);
+    transition: 0.4s
+}
+
+/* --- Liste Formateurs positionnement ---*/
+#listContentHeader, #listContent ul li{
+    display:flex;
+    position: relative;
+}
+#listContentHeader p, #listContent ul li p {
+    margin : 20px 1vw;
+    padding : 0px 10px;
+    overflow: hidden;
+}
+#listContentHeader p:first-child, #listContent ul li p:first-child{
+    padding : 0px 10px;
+    width : 15vw;
+}
+#listContentHeader p:nth-child(2), #listContent ul li p:nth-child(2){
+    width : 20vw;
+}
+#listContentHeader p:nth-child(3), #listContent ul li p:nth-child(3){
+    width : 10vw;
+}
+#listContentHeader p:nth-child(4), #listContent ul li p:nth-child(4){
+    width : 10vw;
+}
+#listContentHeader p:last-child{
+    margin-right: 11vw
+}
+.listIcons{
+    display: flex;
+    position: absolute;
+    right : 0px;
+    width : 10vw;
+}
+
+/* --- Scrollbar --- */
+::-webkit-scrollbar {
+    width: 20px;
+}
+::-webkit-scrollbar-track {
+    background: #D6D6D6; 
+    border: 1px solid #B6B6B6;
+    width: 10px!important;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #5d5d5d80; 
+    border: 1px solid #6e6e6e;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #f1f1f1;
+    background-clip: content-box;
+    border: 1px solid #B6B6B6;
+    border-radius: 9px;
+    box-shadow: -10px 0px 15px 0px #929292;
+}
