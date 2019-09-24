@@ -2,6 +2,7 @@
     background : #FFFFFF;
     height: 80vh;
     margin: auto;
+    min-width: 1000px;
     width: 90vw;
 }
 ul{
@@ -22,7 +23,7 @@ ul{
     display: flex;
 }
 #listNav ul li{
-    height: 40px;
+    height: 60px;
     font-weight: bold;
     font-size: 20px;
     padding: 20px;
@@ -45,11 +46,12 @@ ul{
     background-size: contain;
     filter: opacity(40%);
     height: 25px;
-    right: 360px;
+    right: 315px;
     position: absolute;
     top : 17px;
     width: 35px;
 }
+
 /* --- Liste Formateurs  ---*/
 #listContent{
     padding: 20px;
@@ -60,7 +62,6 @@ ul{
     box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.50);
     color:#000000;
     font-size: 1.1em;
-    padding : 10px 0px;
     position: relative;
     z-index: 5;
 }
@@ -94,22 +95,22 @@ ul{
     transition : 0.4s;
 }
 .deleteIcon{
-    background: url('/assets/icons/bin.svg');
+    background: url('/assets/icons/bin.svg') no-repeat;
 }
 .editIcon{
-    background: url('/assets/icons/pen.svg');
+    background: url('/assets/icons/pen.svg') no-repeat;
 }
 #listContentAdd{
     background: url('/assets/icons/add.svg');
     background-size:contain; 
     filter: opacity(40%);
     height: 25px;
-    margin : 15px auto;
+    margin : 25px auto;
     transition: 0.4s;
     width: 25px;
 }
 #listContentAdd:hover{
-    cursor:hover;
+    cursor:pointer;
     filter: opacity(100%);
     transition: 0.4s
 }
@@ -117,6 +118,12 @@ ul{
 /* --- Liste Formateurs positionnement ---*/
 #listContentHeader, #listContent ul li{
     display:flex;
+    position: relative;
+}
+#listContentHeader p, #listContent ul li p {
+    margin : 20px 1vw;
+    padding : 0px 10px;
+    overflow: hidden;
 }
 #listContentHeader p:first-child, #listContent ul li p:first-child{
     padding : 0px 10px;
@@ -129,10 +136,15 @@ ul{
     width : 10vw;
 }
 #listContentHeader p:nth-child(4), #listContent ul li p:nth-child(4){
-    width : 30vw;
+    width : 10vw;
+}
+#listContentHeader p:last-child{
+    margin-right: 11vw
 }
 .listIcons{
     display: flex;
+    position: absolute;
+    right : 0px;
     width : 10vw;
 }
 
@@ -148,12 +160,11 @@ ul{
 ::-webkit-scrollbar-thumb:hover {
     background: #5d5d5d80; 
     border: 1px solid #6e6e6e;
-
 }
 ::-webkit-scrollbar-thumb {
     background-color: #f1f1f1;
     background-clip: content-box;
     border: 1px solid #B6B6B6;
     border-radius: 9px;
-    box-shadow: 0px 0px 15px 0px #929292;
+    box-shadow: -10px 0px 15px 0px #929292;
 }
