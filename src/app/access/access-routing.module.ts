@@ -4,13 +4,10 @@ import { AccessComponent } from './access.component';
 
 const routes: Routes = [
   {
-    path: '', component: AccessComponent,
-    children: [
-      { path: 'edition', loadChildren: './edition/edition.module#EditionModule' },
-      { path: 'formation', loadChildren: './formation/formation.module#FormationModule' },
-      { path: 'admin', loadChildren:'./admin/admin.module#AdminModule'}
-    ]
-  },
+    path: '', component: AccessComponent},
+    { path: 'edition', loadChildren: './edition/edition.module#EditionModule' },
+    { path: 'formation', loadChildren: './formation/formation.module#FormationModule' },
+    { path: 'admin', loadChildren:'./admin/admin.module#AdminModule'}
 ];
 
 @NgModule({
