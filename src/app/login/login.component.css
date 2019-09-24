@@ -1,0 +1,677 @@
+/*======================FORM==================================*/
+
+.container {
+    width: 100%;
+    margin-top: 300px;
+    text-align: center;
+    z-index: 2;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+
+label {
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    color: #D6D6D6;
+
+}
+
+input[type=text], input[type=password] {
+    width: 35%;
+    padding: 10px 5px;
+    display: inline-block;
+    margin: 15px;
+    border: none;
+    border-bottom: 1px solid #5D5D5D;
+    background: transparent;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+    color: white;
+    z-index: 2;
+  }
+/*----------------------------------MASK PASSWORD---------------------------------------*/
+
+p{
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2em;
+  color: #D6D6D6;
+}
+
+.btn {
+
+  margin-top: 10px;
+  background-color: rgb(40, 60, 131);
+
+}
+  button {
+    font-family: 'Lato', sans-serif;
+    color: #D6D6D6;
+    padding: 14px 20px;
+    margin: 1px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    text-align: center;
+
+  }
+
+  button:hover {
+    opacity: 1;
+    color: white;
+    text-decoration: none;
+  }
+
+  a {
+    text-decoration: none;
+
+  }
+
+  span {
+    font-family: 'Lato', sans-serif;
+    color: white;
+  }
+
+  span a {
+      text-decoration: none;
+      font-family: 'Lato', sans-serif;
+      color: #D6D6D6;
+
+  }
+  span a:hover {
+    color: white;
+}
+
+  .containerOublieMDP {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+/*======================BUTTON TOGGLE==================================*/
+
+.switch {
+  position: relative;
+  display: flex;
+  width:10%;
+  height: 3rem;
+  margin:auto;
+  font-size: 0;
+}
+
+.switch input {
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+  height: 3rem;
+  width: 13rem;
+}
+
+.switch input:checked {
+  z-index: 1;
+}
+
+.switch .toggle-outside {
+  height: 135%;
+  border-radius: 4rem;
+  padding: 1rem;
+  overflow: hidden;
+  transition: 0.25s ease all;
+  background: #D6D6D6;
+  position: absolute;
+  width: 11rem;
+  box-shadow: 0px 0px 15px 2px rgba(0, 96, 185, 0.342);
+}
+
+.switch .toggle-inside {
+  border-radius: 5rem;
+  background: rgb(40, 60, 131);
+  position: absolute;
+  transition: 0.25s ease all;
+  height: 5.5rem;
+  width: 5.5rem;
+  top: 4px;
+}
+
+
+.switch input:checked~.toggle-outside .toggle-inside {
+  left: 0.25rem;
+}
+
+.switch input~input:checked~.toggle-outside .toggle-inside {
+  background: rgb(40, 60, 131);
+  left: 7.25rem;
+}
+
+.switch input~input:checked~.switch {
+  top: 200px;
+}
+
+.switch input:checked~.toggle-outside .toggle-inside {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.switch.switch input, .switch.switch .toggle-outside{
+  left: -19px;
+
+}
+
+.none{
+/* display:none;*/
+  opacity:0;
+}
+
+.do{
+  opacity:1;
+}
+#cefircIMG{
+  position: absolute;
+  top: 25px;
+  margin-left: 15px;
+  width: 15%;
+}
+
+
+
+/*===============================================================================================================================================*/
+/*===============================================================================================================================================*/
+/*=====================================================================MEDIA QUERY ==============================================================*/
+/*===============================================================================================================================================*/
+/*===================================================================max-width: 769px - 1200px =============================================================*/
+
+@media screen and (min-width: 769px) and (max-width: 1200px)  {
+
+  *, *:before, *:after {
+    box-sizing: border-box;
+
+  }
+
+
+  /*======================BUTTON TOGGLE==================================*/
+  .switch {
+    position: relative;
+    display: flex;
+    width:10%;
+    height: 3rem;
+    margin:auto;
+    font-size: 0;
+  }
+  .switch input {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+    height: 3rem;
+    width: 10rem;
+    margin-left: -41px;
+  }
+
+  .switch input:checked {
+    z-index: 1;
+  }
+
+  .switch .toggle-outside {
+    height: 185%;
+    border-radius: 4rem;
+
+    overflow: hidden;
+    transition: 0.25s ease all;
+    background: #D6D6D6;
+    position: absolute;
+
+
+    box-shadow: 0px 0px 15px 2px rgba(0, 96, 185, 0.342);
+    margin-left: -50px;
+  }
+
+  .switch .toggle-inside {
+    border-radius: 5rem;
+    background: rgb(40, 60, 131);
+    position: absolute;
+    transition: 0.25s ease all;
+    height: 5rem;
+    width: 5rem;
+
+  }
+
+  .switch input:checked~.toggle-outside .toggle-inside {
+    left: 0.25rem;
+  }
+
+  .switch input~input:checked~.toggle-outside .toggle-inside {
+    background: #283E83;
+    left: 5.75rem;
+  }
+
+  .switch input~input:checked~.switch {
+    top: 200px;
+  }
+
+  .switch input:checked~.toggle-outside .toggle-inside {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .switch.switch input, .switch.switch .toggle-outside {
+    left: -50;
+  }
+
+
+  /*================================IMAGE CEFIRC LOGO ================================*/
+
+  #cefircIMG{
+    position: relative;
+    display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 5px;
+      width: 30%;
+  }
+
+  /*================================MDP ================================*/
+
+  span {
+    font-family: 'Lato', sans-serif;
+    color: white;
+
+  }
+
+  span a {
+      text-decoration: none;
+      font-family: 'Lato', sans-serif;
+      color: #D6D6D6;
+
+  }
+
+  .containerOublieMDP {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+
+  /*======================FORM==================================*/
+
+
+  form {
+    margin-top: 300px;
+    text-align: center;
+    z-index: 2;
+
+  }
+
+  label {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+    color: #D6D6D6;
+
+  }
+
+  input[type=text], input[type=password] {
+    width: 50%;
+    padding: 12px 5px;
+    margin: 8px 0;
+    display: inline-block;
+    border: none;
+    border-bottom: 1px solid #5D5D5D;
+    background: transparent;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    z-index: 2;
+  }
+
+
+  button {
+
+    font-family: 'Lato', sans-serif;
+    color: white;
+    padding: 15px 20px;
+    margin: 25px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    font-size: 1.8em;
+    text-align: center;
+
+  }
+
+
+  }
+
+
+/*===============================================================================================================================================*/
+/*===============================================================================================================================================*/
+/*=====================================================================MEDIA QUERY ==============================================================*/
+/*===============================================================================================================================================*/
+/*===================================================================min-width: 376px /// max-width: 768px=============================================================*/
+
+@media screen and (min-width: 376px) and (max-width: 768px)  {
+
+  *, *:before, *:after {
+    box-sizing: border-box;
+  }
+
+
+  /*======================BUTTON TOGGLE==================================*/
+  .switch {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    left: -5%;
+    width:16%;
+    height: 3rem;
+    margin-top: -10%;
+    font-size: 0;
+  }
+
+  .switch input {
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+    height: 3rem;
+    width: 6rem;
+    margin: 0;
+  }
+
+  .switch input:checked {
+    z-index: 1;
+  }
+
+  .switch .toggle-outside {
+    height: 185%;
+    border-radius: 4rem;
+
+    overflow: hidden;
+    transition: 0.25s ease all;
+    background: #D6D6D6;
+    position: absolute;
+
+
+    box-shadow: 0px 0px 15px 2px rgba(0, 96, 185, 0.342);
+    margin-left: -50px;
+  }
+
+  .switch .toggle-inside {
+    border-radius: 5rem;
+    background: rgb(40, 60, 131);
+    position: absolute;
+    transition: 0.25s ease all;
+    height: 5rem;
+    width: 5rem;
+
+  }
+
+  .switch input:checked~.toggle-outside .toggle-inside {
+    left: 0.25rem;
+  }
+
+  .switch input~input:checked~.toggle-outside .toggle-inside {
+    background: rgb(40, 60, 131);
+    left: 7.7rem;
+  }
+
+  .switch input~input:checked~.switch {
+    top: 200px;
+  }
+
+  .switch input:checked~.toggle-outside .toggle-inside {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .switch.switch input, .switch.switch .toggle-outside {
+    left: -50;
+  }
+
+
+  /*================================IMAGE CEFIRC LOGO ================================*/
+
+  #cefircIMG{
+    position: relative;
+    display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 15px;
+      width: 30%;
+  }
+
+  /*================================MDP ================================*/
+
+  span {
+    font-family: 'Lato', sans-serif;
+    color: white;
+
+  }
+
+  span a {
+      text-decoration: none;
+      font-family: 'Lato', sans-serif;
+      color: #D6D6D6;
+
+  }
+
+  .containerOublieMDP {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+
+  /*======================FORM==================================*/
+
+
+  form {
+
+    text-align: center;
+    z-index: 2;
+
+  }
+
+  label {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+    color: #D6D6D6;
+
+  }
+
+  input[type=text], input[type=password] {
+    width: 50%;
+
+    padding: 12px 5px;
+    margin: 20px 0;
+    display: inline-block;
+    border: none;
+    border-bottom: 1px solid #5D5D5D;
+    background: transparent;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    z-index: 2;
+  }
+
+
+  button {
+
+    font-family: 'Lato', sans-serif;
+    color: white;
+    padding: 15px 20px;
+    margin: 25px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    font-size: 1.8em;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+
+  }
+
+
+
+  /*===============================================================================================================================================*/
+  /*===============================================================================================================================================*/
+  /*=====================================================================MEDIA QUERY ==============================================================*/
+  /*===============================================================================================================================================*/
+  /*===================================================================max-width: 375px=============================================================*/
+
+
+  @media screen and (min-width: 200px)and (max-width: 375px)  {
+
+
+
+    *, *:before, *:after {
+      box-sizing: border-box;
+
+    }
+
+
+    /*======================BUTTON TOGGLE==================================*/
+
+    .switch {
+      position: relative;
+      display: flex;
+      width:10%;
+      height: 3rem;
+      margin:auto;
+      font-size: 0;
+
+    }
+    .switch input {
+      position: absolute;
+      top: 0;
+      z-index: 2;
+      opacity: 0;
+      cursor: pointer;
+      height: 3rem;
+      width: 6rem;
+      margin: 0;
+    }
+
+    .switch input:checked {
+      z-index: 1;
+    }
+
+    .switch .toggle-outside {
+      height: 150%;
+      border-radius: 4rem;
+
+      overflow: hidden;
+      transition: 0.25s ease all;
+      background: #D6D6D6;
+      position: absolute;
+      width: 10rem;
+
+      box-shadow: 0px 0px 15px 2px rgba(0, 96, 185, 0.342);
+      margin-left: -50px;
+    }
+
+    .switch .toggle-inside {
+      border-radius: 5rem;
+      background: rgb(40, 60, 131);
+      position: absolute;
+      transition: 0.25s ease all;
+      height: 4rem;
+      width: 4rem;
+
+    }
+
+    .switch input:checked~.toggle-outside .toggle-inside {
+      left: 0.25rem;
+    }
+
+    .switch input~input:checked~.toggle-outside .toggle-inside {
+      background: rgb(40, 60, 131);
+      left: 5.75rem;
+    }
+
+    .switch input~input:checked~.switch {
+      top: 200px;
+    }
+
+    .switch input:checked~.toggle-outside .toggle-inside {
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .switch.switch input, .switch.switch .toggle-outside {
+      left: -50;
+    }
+
+
+    /*================================IMAGE CEFIRC LOGO ================================*/
+
+    #cefircIMG{
+      position: relative;
+      display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5px;
+        width: 40%;
+    }
+
+    /*================================MDP ================================*/
+
+    span {
+      font-family: 'Lato', sans-serif;
+      color: white;
+
+    }
+
+    span a {
+        text-decoration: none;
+        font-family: 'Lato', sans-serif;
+        color: #D6D6D6;
+
+    }
+
+    .containerOublieMDP {
+      text-align: center;
+      margin-top: 100px;
+    }
+
+
+    /*======================FORM==================================*/
+
+
+    form {
+      margin-top: 200px;
+      text-align: center;
+      z-index: 2;
+
+    }
+
+    label {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.9rem;
+      color: #D6D6D6
+
+    }
+
+    input[type=text], input[type=password] {
+      width: 70%;
+      padding: 12px 5px;
+      margin: 8px 0;
+      display: inline-block;
+      border: none;
+      border-bottom: 1px solid #5D5D5D;
+      background: transparent;
+      box-sizing: border-box;
+      font-family: 'Lato', sans-serif;
+      font-size: 12px;
+      color:  rgb(255, 255, 255);
+      z-index: 2;
+    }
+
+
+.btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top:-25%;
+}
+
+
+}
