@@ -7,10 +7,6 @@
 }
 
 body {
-    background: url(assets/images/Logo_Cefirc.png) fixed no-repeat;
-    background-size: 15em;
-    background-position-y: 4%;
-    background-position-x: 4%; 
     background-color: #283C83;
 }
 
