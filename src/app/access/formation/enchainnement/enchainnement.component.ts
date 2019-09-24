@@ -88,7 +88,7 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 
 export class EnchainnementComponent implements OnInit {
-  assetOuvert:boolean = true;
+  assetOuvert:boolean = false;
   endX = 0;
   endY = 0;
   

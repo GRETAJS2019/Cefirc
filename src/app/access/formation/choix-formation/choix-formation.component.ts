@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./choix-formation.component.css']
 })
 export class ChoixFormationComponent implements OnInit {
-
+espacecommun:boolean = false;
   constructor() { }
 
   ngOnInit() {

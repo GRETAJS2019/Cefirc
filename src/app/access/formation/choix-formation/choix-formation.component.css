@@ -1,10 +1,18 @@
 .titre h2{
     color:white;
-    font-size:var(--h2-fontSize)
 }
 
 .bloc1 h4{
     background:#D6D6D6;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-top:7px;
+    padding-bottom:7px;
+}
+
+.bloc1false h4{
+    background-color:#5D5D5D;
+    color:white;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     padding-top:7px;
@@ -23,12 +31,18 @@
     border-top-right-radius: 20px;
 }
 
+
 .bloc2 h4{
     background:#5D5D5D;
     padding-top:7px;
     padding-bottom:7px;
-    margin-left:-70px;
+    margin-left:-60px;
     color:white;
+}
+.bloc2true h4{
+    background:#D6D6D6;
+    color:black;
+    border-top-left-radius: 20px;
 }
 
 .card{
@@ -39,6 +53,8 @@
 .blocFormation{
     background-color:#5D5D5D;
 }
+
+
 
 input{
     border-radius:none;
