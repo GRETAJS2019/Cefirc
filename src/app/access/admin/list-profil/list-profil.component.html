@@ -16,16 +16,29 @@
         </div>
         <ul id="listFormateurs">
             <li *ngFor="let formateur of data">
-                <p>{{formateur.nom}}</p>
+                <p >{{formateur.nom}}</p>
                 <p>{{formateur.mail}}</p>
                 <p>{{formateur.tel}}</p>
                 <p>{{formateur.spe}}</p>
                 <div class="listIcons">
                     <span class="editIcon"></span>
-                    <span class="deleteIcon"></span>
+                    <span class="deleteIcon" id="{{formateur.id}}"></span>
                 </div>
             </li>
         </ul>
         <div id="listContentAdd"></div>
+        <div id="delModal">
+            <div id="delModalMsg">
+                <div><i class="fas fa-exclamation-triangle" id="delWarn"></i></div>
+                <div>
+                    <p>SUPPRIMER CET UTILISATEUR ?</p>
+                    <p>Cette opération est irréversible</p>
+                </div>
+            </div>
+            <div id="delModalButtons">
+                <div><span>Annuler</span></div>
+                <div><span>Confirmer</span></div>
+            </div>
+        </div> 
     </div>
 </div>
