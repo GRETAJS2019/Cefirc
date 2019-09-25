@@ -13,24 +13,25 @@ import {
   animations: [
     trigger('openClose', [
       state('open', style({
-        height: '97vh',
+        height: '91.5vh',
         backgroundColor: 'rgba(243, 226, 226, .5)',
         position: 'absolute',
         bottom: 0,
         width: '100vw'
       })),
       state('closed', style({
-        height: '5vh',
+        height: '3vh',
         backgroundColor: 'rgba(243, 226, 226,.7)',
         position: 'absolute',
-        bottom: 0,
+        bottom: '0px',
         width: '100vw'
       })),
+      
       transition('open => closed', [
-        animate('.5s')
+        animate('.7s')
       ]),
       transition('closed => open', [
-        animate('.8s')
+        animate('.7s')
       ])
     ])
   ]
@@ -45,6 +46,9 @@ export class VueGeneraleComponent implements OnInit {
 
   slideDown() {
     this.slideOuvert = ! this.slideOuvert
+
+    console.log(this.slideOuvert);
+    
   }
 
 }

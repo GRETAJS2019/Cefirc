@@ -8,7 +8,6 @@ import {
 } from '@angular/animations';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
-
 @Component({
   selector: 'app-enchainnement',
   templateUrl: './enchainnement.component.html',

@@ -27,10 +27,10 @@ import { Router } from '@angular/router';
 
         /** Bouton Connexion */
         state('btnAfterConnexion', style({
-          marginTop: '0px'
+          marginTop: '20px'
         })),
         state('btnBeforeConnexion', style({
-         marginTop: '100px',
+         marginTop: '0px',
         })),
 
 

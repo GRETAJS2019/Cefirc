@@ -25,7 +25,6 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     NgbModule,
     ShowHidePasswordModule,
-    NoopAnimationsModule,
     MatCheckboxModule,
     MatButtonModule
   ],
