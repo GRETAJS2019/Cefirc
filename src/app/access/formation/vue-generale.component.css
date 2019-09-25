@@ -1,18 +1,18 @@
+@import "~@fortawesome/fontawesome-free/css/all.css"; 
+@import "~bootstrap/dist/css/bootstrap.css"; 
 .vueGenerale{
     position:relative;
-    height:100vh;
     z-index:1;
 }
 
-
 .vueGeneraleImg{
-   
     /* background-position: center;  background: url(../../../assets/images/3D/1.jpg); background-repeat: no-repeat;   background-position: center; Center the image */
     position:relative;
 }
 
+
 .vueGeneraleImg img{
-    height:100vh;
+    height:93.5vh;
     width:100vw;
 }
 
@@ -75,10 +75,11 @@
 
 
 .slideDown i {
-    font-size:45px;
+    transform: scale(3);
+    padding:0;
     cursor:pointer;
     position:relative;
-    top:-25px;
+    top:-10px;
 }
 
 .Formations{

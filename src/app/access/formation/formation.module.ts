@@ -14,7 +14,6 @@ import { DragDropModule } from '@angular/cdk/drag-drop'
 import { AjoutClassDirective } from '../../ajout-class.directive';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-
 @NgModule({
   declarations: [
   VueGeneraleComponent,
@@ -31,7 +30,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     DragDropModule,
     MatCheckboxModule,
     MatButtonModule,
-    FontAwesomeModule
+    FontAwesomeModule,
   ]
 })
 export class FormationModule { }

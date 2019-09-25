@@ -1,5 +1,5 @@
-
-
+@import "~@fortawesome/fontawesome-free/css/all.css"; 
+@import "~bootstrap/dist/css/bootstrap.css"; 
 
 .iconOpenAsset i {
     font-size:60px;
