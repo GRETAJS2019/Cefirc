@@ -34,7 +34,7 @@ ul{
 #listNav ul li.listSelected{
     background: #FFFFFF;
 }
-#listNav input{
+.listInput{
     border:#8D8D8D 1px solid;
     border-radius : 5px;
     margin : 10px;
@@ -79,7 +79,7 @@ ul{
 }
 #listContent ul li{
     background : #D6D6D6 ;
-    color:#5D5D5D;
+    color:#414141;
     font-size: 1.1em;
 }
 #listContent ul li:nth-child(2n){
@@ -98,27 +98,29 @@ ul{
     filter: opacity(100%);
     transition : 0.4s;
 }
-.deleteIcon{
-    background: url('/assets/icons/bin.svg') no-repeat;
-}
-.editIcon{
-    background: url('/assets/icons/pen.svg') no-repeat;
-}
 #listContentAdd{
-    background: url('/assets/icons/add.svg');
     background-size:contain; 
-    filter: opacity(40%);
+    font-size: 1.3em;
     height: 25px;
     margin : 25px auto;
-    transition: 0.4s;
-    width: 25px;
+    text-align: center;
 }
-#listContentAdd:hover{
+#listContentAdd i{
+    cursor:pointer;
+    filter: opacity(40%);
+    transition: 0.4s
+}
+#listContentAdd i:hover{
     cursor:pointer;
     filter: opacity(100%);
     transition: 0.4s
 }
-#delModal{
+i {
+    color : black;
+    font-size : 1.2em;
+}
+/* --- delete Modals ---*/
+#delModal, #addModal{
     background : #F6F6F6;
     border : solid 5px #980F0F;
     box-shadow: 10px 10px 15px 0px #929292; 
@@ -134,16 +136,15 @@ ul{
     transition: 0.4s;
     opacity: 0;
 }
-.popup{
+.popup,#addModal{
     height : 30vh !important;
     left : 30vw!important;
     top: 20vh!important;
     width : 40vw!important;
     transition: 0.4s;
     opacity: 1!important;
-
 }
-#delModalMsg,#delModalButtons{
+#delModalMsg{
     display:flex;
     margin: 10% auto 0px ;
     position: relative;
@@ -153,23 +154,25 @@ ul{
     color: #980F0F;
     font-size: 4.5em;
     margin-right : 20px;
-    /* margin-top : 20px; */
 }
-#delModalMsg div:last-child p:first-child{
+#delModalMsg div:last-child p:first-child, #addModalMsg div:last-child p:first-child{
     font-size: 1.7em;
     font-weight: bold;
 }
-#delModalMsg div:last-child p:last-child{
+#delModalMsg div:last-child p:last-child, #addModalMsg div:last-child p:last-child{
     color: #980F0F;
     font-style: italic;
     font-size: 1.4em;
     font-weight: bold;
     margin-top: 10px;
 }
+
 #delModalButtons{
+    margin:auto;
     margin-top : 8%;
     justify-content: flex-end;
-    width: 300px;
+    width: 40%;
+    display:flex;
 }
 #delModalButtons div{
     background : #FFFFFF;
@@ -248,5 +251,3 @@ ul{
     border-radius: 9px;
     box-shadow: -10px 0px 15px 0px #929292;
 }
-
-

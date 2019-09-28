@@ -1,0 +1,220 @@
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+
+#listeContainer{
+    background : #FFFFFF;
+    height: 80vh;
+    margin: 20px auto;
+    min-width: 1000px;
+    width: 90vw;
+}
+ul{
+    list-style: none;
+    margin : 0px;
+    padding: 0px;
+}
+
+/* --- Liste Nav --- */
+#listNav{
+    background:#D6D6D6;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    position: relative;
+}
+#listNav ul {
+    display: flex;
+}
+#listNav ul li{
+    height: 60px;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px;
+}
+#listNav ul li.listSelected{
+    background: #FFFFFF;
+}
+
+
+/* --- Info profil  ---*/
+#listContent{
+    background : #ffffff;
+    padding: 20px;
+    position: relative;
+    z-index: 10;
+}
+#mainContent{
+    display:flex;
+}
+#profilPic{
+    border:solid black 1px;
+    font-size:  14vw;
+    padding: 1vw;
+    height : 14vw;
+    margin-right : 20px;
+    overflow:hidden; 
+    position: relative;
+    text-align: center;
+    width: 14vw;
+}
+#picFilter{
+    background: #bababae1;
+    cursor:pointer;
+    font-size:  8vw;
+    height: 11vw!important;
+    left : 0px;
+    padding: 3vw;
+    position: absolute;
+    opacity: 0;
+    transform:scale(1);
+    transition: 0.4s;
+    top:1vw;
+    width: 10vw;
+    z-index: 16;
+}
+#picFilter:hover{
+    opacity: 1;
+    transform:scale(1.2);
+    transition:0.4s;
+}
+#listContent ul{
+    height: 60vh;
+    width: 70vw;
+}
+#listContent ul li{
+    background : #D6D6D6 ;
+    color:#414141;
+    display: flex;
+    font-size: 1.1em;
+    padding: 20px;
+}
+#listContent ul li:nth-child(2n){
+    background : #F6F6F6;
+}
+#listContent li p{
+    width: 15%;
+    min-width: 150px;
+}
+#listContent li input{
+    display:flex;
+    height: 30px;
+    margin:-5px 5px;
+    position: relative;
+    right : 10px;
+    width: 90%;
+}
+#listContent #createPassword div{
+    display:flex;
+    width: 90%;
+    position: relative;
+}
+#createPassword input{
+    position: relative;
+    width: 45%!important;
+}
+#Permissions, #Permissions p, #Permissions div{
+    display: flex;
+    position: relative;
+}
+#Permissions div{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+#Permissions div p{
+    width: 200px!important;
+}
+
+
+/* --- delete Modals ---*/
+#modal{
+    background : #F6F6F6;
+    border : solid 5px #980F0F;
+    box-shadow: 10px 10px 15px 0px #929292; 
+    height : 0vh;
+    left : 50vw;
+    overflow: hidden;
+    position: absolute;
+    top: 30vh;
+    width : 0vw;
+    z-index: 10;
+    display: none;
+    transition: 0.4s;
+    opacity: 0;
+}
+.popup{
+    height : 30vh !important;
+    left : 30vw!important;
+    top: 15vh!important;
+    width : 40vw!important;
+    transition: 0.4s;
+    opacity: 1!important;
+}
+
+#delWarn{
+    color: #980F0F;
+    font-size: 4.5em;
+    margin-right : 20px;
+}
+#modal #msg{
+    display:flex;
+    margin:5vh auto;
+    width : 30vw;
+}
+#modal #msg p{
+    font-weight: bold;
+    margin-top:2vh;
+}
+/* ---- Confirms buttons ---- */
+.ModalButtons{
+    display : flex;
+    margin:auto;
+    width: 50%;
+}
+.ModalButtons div{
+    background : #FFFFFF;
+    border: solid  3px #D6D6D6;
+    border-radius: 200px;
+    cursor : pointer;
+    font-size: 1.4em;
+    margin: auto;
+    padding: 5px 10px;
+    transition : 0.4s;
+}
+.ModalButtons a {
+    color:#414141;
+}
+.ModalButtons div:hover{
+    box-shadow: 5px 5px 10px 0px #929292; 
+    transform : scale(1.05);
+    transition : 0.4s;
+}
+.ModalButtons div:first-child{
+    border-color: #b5b5b5;
+    font-weight: bold;
+}
+.ModalButtons div span{
+    margin: auto;
+    width: 100px;
+}
+
+/* --- Scrollbar --- */
+::-webkit-scrollbar {
+    width: 20px;
+}
+::-webkit-scrollbar-track {
+    background: #D6D6D6; 
+    border: 1px solid #B6B6B6;
+    width: 10px!important;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #5d5d5d80; 
+    border: 1px solid #6e6e6e;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #f1f1f1;
+    background-clip: content-box;
+    border: 1px solid #B6B6B6;
+    border-radius: 9px;
+    box-shadow: -10px 0px 15px 0px #929292;
+}
