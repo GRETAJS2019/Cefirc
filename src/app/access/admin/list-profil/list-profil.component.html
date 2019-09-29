@@ -4,7 +4,7 @@
             <li class='listSelected'>FORMATEURS</li>
             <li></li>
         </ul>
-        <input placeholder="Rechercher">
+        <input placeholder="Rechercher" class="listInput">
         <div id="searchIcon"></div>
     </div>
     <div id="listContent">
@@ -14,18 +14,33 @@
             <p>Téléphone</p>
             <p>Spécialisation</p>
         </div>
-        <ul id="listFormateurs">
+        <ul>
             <li *ngFor="let formateur of data">
                 <p>{{formateur.nom}}</p>
                 <p>{{formateur.mail}}</p>
                 <p>{{formateur.tel}}</p>
                 <p>{{formateur.spe}}</p>
                 <div class="listIcons">
-                    <span class="editIcon"></span>
-                    <span class="deleteIcon"></span>
+                    <span><a href="../../../profil"><i class="fas fa-pen"></i></a></span>
+                    <span id="{{formateur.id}}" class="deleteIcon"><i class="fas fa-trash-alt"></i></span>
                 </div>
             </li>
         </ul>
-        <div id="listContentAdd"></div>
+        <div id="listContentAdd">
+            <a href="/access/admin/editProfil" ><i class="fas fa-plus-circle"></i></a>
+        </div>
+        <div id="delModal">
+            <div id="delModalMsg">
+                <div><i class="fas fa-exclamation-triangle" id="delWarn"></i></div>
+                <div>
+                    <p>SUPPRIMER CET UTILISATEUR ?</p>
+                    <p>Cette opération est irréversible</p>
+                </div>
+            </div>
+            <div id="delModalButtons">
+                <div><span>Annuler</span></div>
+                <div><span>Confirmer</span></div>
+            </div>
+        </div>
     </div>
 </div>
