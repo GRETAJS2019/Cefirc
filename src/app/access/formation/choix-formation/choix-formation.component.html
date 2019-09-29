@@ -9,21 +9,21 @@
         </div>
     
         <div class="row mt-5">
-            <div class="col-4 " [ngClass]="espacecommun == false ? 'bloc1' : 'bloc1false' ">
-                <a (click)="espacecommun = false" style="cursor:pointer">
-                    <h4 class="text-uppercase text-center ">Espace Personnel</h4>
-                </a>
-            </div>
-            <div class="col-4  bloc2" [ngClass]="espacecommun ? 'bloc2true' : '' ">
-                <a (click)="espacecommun = true" style="cursor:pointer">
-                    <h4 class="text-uppercase text-center">Espace commun</h4>
-                </a>
-            </div>
+                    <div class="col-4 choixformation" [ngClass]="espacecommun == false ? 'bloc1' : 'bloc1false' ">
+                            <a (click)="espacecommun = false" style="cursor:pointer">
+                                <h4 class="text-uppercase text-center ">Espace Personnel</h4>
+                            </a>
+                        </div>
+                        <div class="col-4 choixformation  bloc2" [ngClass]="espacecommun ? 'bloc2true' : '' ">
+                            <a (click)="espacecommun = true" style="cursor:pointer">
+                                <h4 class="text-uppercase text-center">Espace commun</h4>
+                            </a>
+                        </div>
+           
             <div class="col-4">
                 <input type="text" class="form-control" placeholder="Rechercher">
             </div>
         </div>
-    
     
         <!-- Premier block -->
         <div class="espace" *ngIf="!espacecommun ">

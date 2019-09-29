@@ -26,7 +26,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     NgbModule,
     ShowHidePasswordModule,
     MatCheckboxModule,
-    MatButtonModule
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
