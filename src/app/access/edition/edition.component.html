@@ -5,14 +5,16 @@
 </div>
 
 
-<div class="wrapper  ">
+<div class="wrapper mt-5 ">
     <div class="menu">
-        <div [@openClose]="espacecommun == true ? 'notespacepersonnel' : 'espacepersonnel'"  [ngClass]="espacecommun == false ? ' espacepersonnel' : ' espacepersonnelnotselected' ">
+        <div [@openClose]="espacecommun == false ? 'espacepersonnel' : 'notespacepersonnel'"
+            [ngClass]="espacecommun == false ? ' espacepersonnel' : ' espacepersonnelnotselected' ">
             <a (click)="espacecommun = false">
                 <h4 class="text-uppercase text-center text-uppercase">Espace Personnel</h4>
             </a>
         </div>
-        <div  [@openClose]="espacecommun == true ? 'notespacepersonnel' : 'espacepersonnel'" [ngClass]="espacecommun == false ? 'col-3 espacecommun' : ' col-6 espacecommunnotselected' ">
+        <div [@openClose]="espacecommun == false ? 'notespacecommun' : 'espacecommun'"
+            [ngClass]="espacecommun == false ? 'espacecommun' : 'espacecommunnotselected' ">
             <a (click)="espacecommun = true">
                 <h4 class="text-uppercase text-center text-uppercase">Espace commun</h4>
             </a>
@@ -30,13 +32,13 @@
             <i class="fas fa-chevron-left"></i>
         </div>
 
-        <div class="col-3 " *ngIf="!next">
+        <div class="col-3 " *ngIf="!next && !espacecommun" >
             <div class="card">
-                <img src="../../../../assets/images/3D/1.jpg" class="img-fluid" (click)="scenarioopened = !scenarioopened">
+                <img src="../../../../assets/images/3D/1.jpg" class="img-fluid" (click)="scenarioopened = true">
                 <div class="card-body">
                     <div class="formation1 ">
                         <div class="formation1-nom">
-                            <p  class="text-center span">FORMATION No. 1 </p><i (click)="openedition1 = !openedition1"
+                            <p class="text-center span">FORMATION No. 1 </p><i (click)="openedition1 = !openedition1"
                                 class="fas fa-mouse"></i>
                         </div>
                         <div class="edit" [@openClose]="openedition1 == true ? 'openedition' : 'closededition'">
@@ -53,9 +55,31 @@
         </div>
 
 
-        <div class="col-3 ">
+        <div class="col-3 " *ngIf="espacecommun">
+                <div class="card ">
+                    <img src="../../../../assets/images/3D/4.jpg" class="img-fluid" (click)="scenarioopened = true">
+                    <div class="card-body">
+                        <div class="formation1 ">
+                            <div class="formation1-nom">
+                                <p class="text-center span">FORMATION No. 2</p><i (click)="openedition2 = !openedition2"
+                                    class="fas fa-mouse"></i>
+                            </div>
+                            <div class="edit" [@openClose]="openedition2 == true ? 'openedition' : 'closededition'">
+                                <i class="fas fa-trash-alt"></i>
+                                <i class="fas fa-edit"></i>
+                                <i class="fas fa-share-alt"></i>
+                                <i class="fas fa-copy"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        <div class="col-3 " *ngIf="!espacecommun">
             <div class="card ">
-                <img src="../../../../assets/images/3D/4.jpg" class="img-fluid">
+                <img src="../../../../assets/images/3D/4.jpg" class="img-fluid" (click)="scenarioopened = true">
                 <div class="card-body">
                     <div class="formation1 ">
                         <div class="formation1-nom">
@@ -74,9 +98,34 @@
         </div>
 
 
+        <div class="col-3 " *ngIf="espacecommun">
+                <div class="card">
+                    <img src="../../../../assets/images/3D/5.jpg" class="img-fluid" 
+                        (click)="scenarioopened = true">
+                    <div class="card-body">
+                        <div class="formation1 ">
+                            <div class="formation1-nom">
+                                <p class="text-center span">FORMATION No. 4 </p><i (click)="openedition1 = !openedition1"
+                                    class="fas fa-mouse"></i>
+                            </div>
+                            <div class="edit" [@openClose]="openedition1 == true ? 'openedition' : 'closededition'">
+                                <i class="fas fa-trash-alt"></i>
+                                <i class="fas fa-edit"></i>
+                                <i class="fas fa-share-alt"></i>
+                                <i class="fas fa-copy"></i>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                </div>
+            </div>
+    
+
+
         <div class="col-3 ">
             <div class="card ">
-                <img src="../../../../assets/images/3D/1.jpg" class="img-fluid">
+                <img src="../../../../assets/images/3D/1.jpg" class="img-fluid" (click)="scenarioopened = true">
                 <div class="card-body">
                     <div class="formation1 ">
                         <div class="formation1-nom">
@@ -99,11 +148,12 @@
 
         <div class="col-3 " *ngIf="next">
             <div class="card">
-                <img src="../../../../assets/images/3D/5.jpg" class="img-fluid" (click)="scenarioopened = !scenarioopened">
+                <img src="../../../../assets/images/3D/5.jpg" class="img-fluid" 
+                    (click)="scenarioopened = true">
                 <div class="card-body">
                     <div class="formation1 ">
                         <div class="formation1-nom">
-                            <p  class="text-center span">FORMATION No. 4 </p><i (click)="openedition1 = !openedition1"
+                            <p class="text-center span">FORMATION No. 4 </p><i (click)="openedition1 = !openedition1"
                                 class="fas fa-mouse"></i>
                         </div>
                         <div class="edit" [@openClose]="openedition1 == true ? 'openedition' : 'closededition'">
@@ -120,8 +170,8 @@
         </div>
 
 
-        <div class="col-2 ">
-            <div class="card ">
+        <div class="col-2 " style="align-self:center" >
+            <div class="card " >
                 <div class="ajoutFormation">
                     <img src="../../../../assets/images/ajoutButton.png" class="img-fluid">
                     <p class="text-center">Ajouter une formation</p>
@@ -135,66 +185,155 @@
 
     </div>
 
-<!--      SCENARIO -->
+    <!--      SCENARIO [@openClose]="scenarioopened == true ? 'openscenario' : 'closescenario'" -->
 
-    <div class="scenario mt-3 pb-3 pt-3" [@openClose]="scenarioopened == true ? 'openscenario' : 'closescenario'">
-       <div class="col-2">
+    <div class="scenario-formation"  [@openClose]="scenarioopened == true ? 'openscenario' : 'closescenario'">
+
+        <div class="scenario mt-3 pb-3 pt-3">
+            <div class="close" (click)=" scenarioficheclosed()">
+                <i class="fas fa-times-circle"></i>
+            </div>
             <div class="card ">
-                    <img src="../../../../assets/images/scenario/1.jpg" class="img-fluid">
-                    <div class="card-body">
-                        <div class="scenario-body">
-                                <div class="scenario-nom">
-                                        <p class="text-center span">SCENARIO No. 1</p>
-                              </div>
-                              <div class="scenario-edit">
-                                    <i class="fas fa-trash-alt"></i>
-                                    <i class="fas fa-edit"></i>
-                                    <i class="fas fa-share-alt"></i>
-                                    <i class="fas fa-copy"></i>
-                                </div>
+                <img src="../../../../assets/images/scenario/1.jpg" class="img-fluid" (click)="ficheopened = true">
+                <div class="card-body">
+                    <div class="scenario-body">
+                        <div class="scenario-nom">
+                            <p class="text-center span">SCENARIO 1</p>
+                        </div>
+                        <div class="scenario-edit">
+                            <i class="fas fa-trash-alt"></i>
+                            <i class="fas fa-edit"></i>
+                            <i class="fas fa-share-alt"></i>
+                            <i class="fas fa-copy"></i>
                         </div>
                     </div>
                 </div>
-       </div>
+            </div>
 
-       <div class="col-2">
             <div class="card ">
-                    <img src="../../../../assets/images/scenario/2.jpg" class="img-fluid">
-                    <div class="card-body">
-                        <div class="scenario-body">
-                                <div class="scenario-nom">
-                                        <p class="text-center span">SCENARIO No. 2</p>
-                              </div>
-                              <div class="scenario-edit">
-                                    <i class="fas fa-trash-alt"></i>
-                                    <i class="fas fa-edit"></i>
-                                    <i class="fas fa-share-alt"></i>
-                                    <i class="fas fa-copy"></i>
-                                </div>
+                <img src="../../../../assets/images/scenario/2.jpg" class="img-fluid" (click)="ficheopened = true">
+                <div class="card-body">
+                    <div class="scenario-body">
+                        <div class="scenario-nom">
+                            <p class="text-center span">SCENARIO 2</p>
+                        </div>
+                        <div class="scenario-edit">
+                            <i class="fas fa-trash-alt"></i>
+                            <i class="fas fa-edit"></i>
+                            <i class="fas fa-share-alt"></i>
+                            <i class="fas fa-copy"></i>
                         </div>
                     </div>
                 </div>
-       </div>
+            </div>
 
-       <div class="col-2">
             <div class="card ">
-                    <img src="../../../../assets/images/scenario/3.jpg" class="img-fluid">
-                    <div class="card-body">
-                        <div class="scenario-body">
-                                <div class="scenario-nom">
-                                        <p class="text-center span">SCENARIO No. 3</p>
-                              </div>
-                              <div class="scenario-edit">
-                                    <i class="fas fa-trash-alt"></i>
-                                    <i class="fas fa-edit"></i>
-                                    <i class="fas fa-share-alt"></i>
-                                    <i class="fas fa-copy"></i>
-                                </div>
+                <img src="../../../../assets/images/scenario/3.jpg" class="img-fluid" (click)="ficheopened = true">
+                <div class="card-body">
+                    <div class="scenario-body">
+                        <div class="scenario-nom">
+                            <p class="text-center span">SCENARIO 3</p>
+                        </div>
+                        <div class="scenario-edit">
+                            <i class="fas fa-trash-alt"></i>
+                            <i class="fas fa-edit"></i>
+                            <i class="fas fa-share-alt"></i>
+                            <i class="fas fa-copy"></i>
                         </div>
                     </div>
                 </div>
-       </div>
+            </div>
+
+            <div class="ajoutScenario">
+                <div class="img text-center">
+                    <img src="../../../../assets/images/ajoutButton.png" class="img-fluid">
+                </div>
+                <p class="text-center">Ajouter un enchaînement</p>
+            </div>
+
+            <div class="scenario-next">
+                  <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+
+        <div class="nomFormationScenario">
+            <p class="text-center">FORMATION No.1</p>
+        </div>
     </div>
 
+                    <!-- FICHE -->
+
+    <div class="fiche-formation" [@openClose]="ficheopened == true ? 'openfiche' : 'closefiche'">
+            <div class="fiche mt-3 pb-3 pt-3">
+                    <div class="close" (click)="ficheopened = false">
+                            <i class="fas fa-times-circle"></i>
+                      </div>
+                <div class="card ">
+                    <img src="../../../../assets/images/scenario/1.jpg" class="img-fluid">
+                    <div class="card-body">
+                        <div class="fiche-body">
+                            <div class="fiche-nom">
+                                <p class="text-center span">FICHE 1</p>
+                            </div>
+                            <div class="fiche-edit">
+                                <i class="fas fa-trash-alt"></i>
+                                <i class="fas fa-edit"></i>
+                                <i class="fas fa-share-alt"></i>
+                                <i class="fas fa-copy"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card ">
+                    <img src="../../../../assets/images/scenario/2.jpg" class="img-fluid">
+                    <div class="card-body">
+                        <div class="fiche-body">
+                            <div class="fiche-nom">
+                                <p class="text-center span">FICHE 2</p>
+                            </div>
+                            <div class="fiche-edit">
+                                <i class="fas fa-trash-alt"></i>
+                                <i class="fas fa-edit"></i>
+                                <i class="fas fa-share-alt"></i>
+                                <i class="fas fa-copy"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card ">
+                    <img src="../../../../assets/images/scenario/3.jpg" class="img-fluid">
+                    <div class="card-body">
+                        <div class="fiche-body">
+                            <div class="fiche-nom">
+                                <p class="text-center span">FICHE 3</p>
+                            </div>
+                            <div class="fiche-edit">
+                                <i class="fas fa-trash-alt"></i>
+                                <i class="fas fa-edit"></i>
+                                <i class="fas fa-share-alt"></i>
+                                <i class="fas fa-copy"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="ajoutScenario">
+                    <div class="img text-center">
+                        <img src="../../../../assets/images/ajoutButton.png" class="img-fluid">
+                    </div>
+                    <p class="text-center">Ajouter un enchaînement</p>
+                </div>
+    
+                <div class="scenario-next">
+                      <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+    
+            <div class="nomFormationScenario">
+                <p class="text-center">SCENARIO No.1</p>
+            </div>
+        </div>
 </div>
 <router-outlet></router-outlet>
