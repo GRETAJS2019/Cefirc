@@ -44,7 +44,7 @@
                         <div class="edit" [@openClose]="openedition1 == true ? 'openedition' : 'closededition'">
                             <i (click)="supprimer = true" class="fas fa-trash-alt"></i>
                             <i class="fas fa-edit"></i>
-                            <i class="fas fa-share-alt"></i>
+                            <i (click)="partager = true" class="fas fa-share-alt"></i>
                             <i (click)="copier = true" class="fas fa-copy"></i>
                         </div>
                     </div>
@@ -55,13 +55,13 @@
         </div>
 
 
-        <div class="col-3 " *ngIf="espacecommun">
+        <div class="col-3 " *ngIf="espacecommun && !next">
                 <div class="card ">
                     <img src="../../../../assets/images/3D/4.jpg" class="img-fluid" (click)="scenarioopened = true">
                     <div class="card-body">
                         <div class="formation1 ">
                             <div class="formation1-nom">
-                                <p class="text-center span">FORMATION No. 2</p><i (click)="openedition2 = !openedition2"
+                                <p class="text-center span">FORMATION No. 2</p><i 
                                     class="fas fa-mouse"></i>
                             </div>
                             <div class="edit" [@openClose]="openedition2 == true ? 'openedition' : 'closededition'">
@@ -148,7 +148,7 @@
                     <div class="card-body">
                         <div class="formation1 ">
                             <div class="formation1-nom">
-                                <p class="text-center span">FORMATION No. 4 </p><i (click)="openedition4 = !openedition4"
+                                <p class="text-center span">FORMATION No. 4 </p><i 
                                     class="fas fa-mouse"></i>
                             </div>
                             <div class="edit" [@openClose]="openedition4 == true ? 'openedition' : 'closededition'">
@@ -166,7 +166,7 @@
     
 
 
-        <div class="col-3 ">
+        <div class="col-3" *ngIf="!espacecommun || espacecommun">
             <div class="card ">
                 <img src="../../../../assets/images/3D/1.jpg" class="img-fluid" (click)="scenarioopened = true">
                 <div class="card-body">
@@ -189,7 +189,30 @@
             </div>
         </div>
 
-        <div class="col-3 " *ngIf="next">
+
+
+        <div class="col-3 " *ngIf="next && espacecommun && partager" >
+            <div class="card">
+                <img src="../../../../assets/images/3D/1.jpg" class="img-fluid" (click)="scenarioopened = true">
+                <div class="card-body">
+                    <div class="formation1 ">
+                        <div class="formation1-nom">
+                            <p class="text-center span">FORMATION No. 1 </p><i class="fas fa-mouse"></i>
+                        </div>
+                        <div class="edit">
+                            <i class="fas fa-trash-alt"></i>
+                            <i class="fas fa-edit"></i>
+                            <i  class="fas fa-share-alt"></i>
+                            <i  class="fas fa-copy"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-3 " *ngIf="!espacecommun && next">
             <div class="card">
                 <img src="../../../../assets/images/3D/5.jpg" class="img-fluid" 
                     (click)="scenarioopened = true">
@@ -211,6 +234,9 @@
 
             </div>
         </div>
+
+
+
 
 
         <div class="col-3 " *ngIf="next && copier">

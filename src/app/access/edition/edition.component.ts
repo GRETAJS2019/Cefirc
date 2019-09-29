@@ -116,6 +116,7 @@ export class EditionComponent implements OnInit {
 
   supprimer:boolean = false;
   copier:boolean = false;
+  partager:boolean = false;
   constructor() { }
 
   ngOnInit() {
