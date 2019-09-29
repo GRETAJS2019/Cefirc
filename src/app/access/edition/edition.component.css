@@ -33,6 +33,7 @@
 .edit i{
    font-size:1.7em;
    margin-left:15px;
+   cursor:pointer;
 }
 
 .menu{
@@ -176,7 +177,7 @@
 
 .previous i{
     font-size:5em;
-    color:white;
+    color:#a8a8a8;
 }
 
 .next i{

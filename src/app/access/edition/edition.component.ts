@@ -106,11 +106,16 @@ export class EditionComponent implements OnInit {
   openedition1: boolean = false;
   openedition2: boolean = false;
   openedition3: boolean = false;
+  openedition4:boolean = false;
+  openedition5:boolean = false;
 
   next:boolean = false;
 
   scenarioopened:boolean = false;
   ficheopened:boolean = false;
+
+  supprimer:boolean = false;
+  copier:boolean = false;
   constructor() { }
 
   ngOnInit() {
