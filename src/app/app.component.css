@@ -1,3 +1,5 @@
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
 nav {
     background: url(../assets/images/Logo_Cefirc.png) no-repeat;
     background-size: 8em;
@@ -5,8 +7,12 @@ nav {
     background-position-x: 4%;
     height: 50px;
     margin-top: 20px;
-
+    display: flex;
+    flex-flow: row-reverse;
 }
+ #return {
+     height: 15px;
+ }
 
 body{
     background-color: #283C83;
