@@ -8,13 +8,12 @@ import { EnchainnementComponent } from './enchainnement/enchainnement.component'
 import { ChoixFormationComponent } from './choix-formation/choix-formation.component';
 
 const routes: Routes = [
-  {
-    path: '', component: ChoixFormationComponent},
-    { path: 'enchainements', component: EnchainnementComponent },
-    { path: 'quiz', component: QuizComponent },
-    { path: 'resultat', component: ResultatComponent },
-    { path: 'slide', component: SlideComponent },
-    { path: 'vue', component: VueGeneraleComponent}
+    {path: '', component: ChoixFormationComponent},
+    {path: 'enchainements', component: EnchainnementComponent} ,
+    {path: 'quiz', component: QuizComponent },
+    {path: 'resultat', component: ResultatComponent} ,
+    {path: 'slide', component: SlideComponent} ,
+    {path: 'vue', component: VueGeneraleComponent}
 ];
 
 @NgModule({
