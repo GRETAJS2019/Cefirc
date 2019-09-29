@@ -1,6 +1,14 @@
-div {
-    margin-top: 50vh;
-    transform: translateY(-50%);
+nav {
+    background: url(../assets/images/Logo_Cefirc.png) no-repeat;
+    background-size: 8em;
+    background-position-y: 4%;
+    background-position-x: 4%;
+    height: 50px;
+    margin-top: 20px;
 
+}
+
+body{
+    background-color: #283C83;
 }
 

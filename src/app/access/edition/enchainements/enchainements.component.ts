@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './enchainements.component.html',
   styleUrls: ['./enchainements.component.css']
 })
+
 export class EnchainementsComponent implements OnInit {
 
   constructor() { }

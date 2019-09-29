@@ -10,22 +10,23 @@ import { ShowHidePasswordModule } from 'ngx-show-hide-password';
 import { NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    ProfilComponent
+    ProfilComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    NgbModule,
     ShowHidePasswordModule,
-    NoopAnimationsModule,
     MatCheckboxModule,
-    MatButtonModule
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

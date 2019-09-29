@@ -1,1 +1,110 @@
-<p>enchainnement works!</p>
+
+
+  
+<div class="container ">
+    <!--   <div class="row">
+            <div class="col-12">
+                    <h1 class="text-center  text-uppercase mt-3">Fiche 1</h1>
+            </div>
+    </div>
+-->
+    <div class="assets ">
+            <div class="iconOpenAsset" [@openClose]="assetOuvert == true ? 'closedclicked' : 'openclicked'">
+                    <i class="fas fa-sync-alt" (click)="assetOuvert = !assetOuvert"></i>
+            </div>
+
+            <div class="assetsBody" [@openClose]="assetOuvert == true  ? 'assetsbodycoloropened' : 'assetsbodycolorclosed'"    > <!--[@openClose]="assetOuvert == true  ? 'open' : 'closed'"  [@openClose]="assetOuvert == true  ? 'open' : 'close'"  cdkDropList cdkDropListDropped)="drop($event)"-->
+                    <div class="row" >
+                            <div class="col-6" (cdkDragMoved)="dragMoved($event, action)"  cdkDrag [@openClose]="assetOuvert == true  ? 'open' : 'closed'"    > 
+                                    <i class="fas fa-fire-extinguisher"></i>
+                            </div>
+                            <div class="col-6" cdkDrag  (cdkDragMoved)="dragMoved($event, action)"  cdkDrag [@openClose]="assetOuvert == true  ? 'open' : 'closed'">
+                                    <i class="fas fa-clinic-medical"></i>
+                            </div>
+                    </div>
+                    <div class="row">
+
+                   
+                            <div class="col-6" cdkDrag (cdkDragMoved)="dragMoved($event, action)"  cdkDrag [@openClose]="assetOuvert == true  ? 'open' : 'closed'">
+                                    <i class="fas fa-fire"></i>
+                            </div>
+
+                            <div class="col-6" cdkDrag (cdkDragMoved)="dragMoved($event, action)"  cdkDrag [@openClose]="assetOuvert == true  ? 'open' : 'closed'">
+                                    <i class="fas fa-user-tie"></i>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                       
+                            <div class="col-6" cdkDrag (cdkDragMoved)="dragMoved($event, action)"  cdkDrag [@openClose]="assetOuvert == true  ? 'open' : 'closed'">
+                                    <i class="fas fa-tools"></i>
+                            </div>
+
+
+                            <div class="col-6" cdkDrag (cdkDragMoved)="dragMoved($event, action)"  cdkDrag [@openClose]="assetOuvert == true  ? 'open' : 'closed'">
+                                    <i class="fas fa-radiation-alt"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-6" cdkDrag (cdkDragMoved)="dragMoved($event, action)"  cdkDrag [@openClose]="assetOuvert == true  ? 'open' : 'closed'">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+
+
+                            <div class="col-6" cdkDrag (cdkDragMoved)="dragMoved($event, action)"  cdkDrag [@openClose]="assetOuvert == true  ? 'open' : 'closed'">
+                                    <i class="fas fa-skull-crossbones"></i>
+                            </div>
+
+                    </div>
+
+            </div>
+    </div>
+
+    <div class="row mt-5">
+
+
+
+            <div id="myCarousel" class="carousel slide"
+                    [@openClose]="assetOuvert == true ? 'openbodyMove' : 'closebodyMove'">
+
+                    <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                    <img src="../../../../assets/images/enchainement/1.jpg" class="img-fluid">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../../../../assets/images/enchainement/top1.jpg" class="img-fluid">
+                            </div>
+
+                    </div>
+
+                    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="fas fa-arrow-alt-circle-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                            <span class="fas fa-arrow-alt-circle-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                    </a>
+
+                    <ul class="carousel-indicators list-inline mx-auto  px-2">
+                            <li class="list-inline-item active">
+                                    <a id="carousel-selector-0" class="selected" data-slide-to="0"
+                                            data-target="#myCarousel">
+                                            <img src="../../../../assets/images/enchainement/1.jpg" class="img-fluid">
+                                    </a>
+                            </li>
+                            <li class="list-inline-item">
+                                    <a id="carousel-selector-1" data-slide-to="1" data-target="#myCarousel">
+                                        <img src="../../../../assets/images/enchainement/top1.jpg" class="img-fluid">
+                                    </a>
+                            </li>
+                    </ul>
+
+            </div>
+
+    </div>
+
+
+    

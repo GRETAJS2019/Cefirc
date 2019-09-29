@@ -1,1 +1,62 @@
-<p>edit-profil works!</p>
+<div id="listeContainer">
+    <div id="listNav">
+        <ul>
+            <li class='listSelected'>FORMATEURS</li>
+            <li></li>
+        </ul>
+    </div>
+    <div id="listContent">
+        <div id="mainContent">
+            <div id="profilPic">
+                <i class="fas fa-user-alt"></i>
+                <div id="picFilter"><i class="fas fa-plus-circle"></i></div>
+            </div>
+            <ul>
+                <li><p>Nom</p><input></li>
+                <li><p>Prénom</p><input></li>
+                <li><p>Email</p><input></li>
+                <li><p>Téléphone</p><input></li>
+                <li><p>Spécialité</p><input></li>
+                <li id="createPassword"><p>Mot de passe</p>
+                    <div>
+                        <input>
+                        <p>Confirmer</p>
+                        <input>
+                    </div>
+                </li>
+                <li id="Permissions"><p>Permissions</p>
+                    <div>
+                        <p>
+                            <label for="Administrateur">Administrateur</label>
+                            <input type="checkbox" id="Administrateur" name="Administrateur">
+                        </p>
+                        <p>
+                            <label for="Formateur">Formateur</label>
+                            <input type="checkbox" id="Formateur" name="Formateur">
+                        </p>
+                        <p>
+                            <label for="Aucun">Aucun</label>
+                            <input type="checkbox" id="Aucun" name="Aucun">
+                        
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="ModalButtons">
+            <div><a href="../access/admin"><span>Annuler la création</span></a></div>
+            <div><a href="../access/admin"><span>Confirmer la création</span></a></div>
+        </div>
+        <div id="modal">
+            <div id="msg">
+                <i class="fas fa-exclamation-triangle" id="delWarn"></i>
+                <p>DONNER LES DROIT ADMINISTRATEUR?</p>
+            </div>
+            <div class="ModalButtons">
+                
+                <div><span id="annuler">Annuler</span></div>
+                <div><span id="confirmer">Confirmer</span></div>
+            </div>
+        </div>
+    </div>
+</div>

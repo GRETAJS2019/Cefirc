@@ -6,6 +6,7 @@ import { AdminComponent } from './admin.component';
 import { ListProfilComponent } from './list-profil/list-profil.component';
 import { EditProfilComponent } from './edit-profil/edit-profil.component';
 import { EspacePersoComponent } from './espace-perso/espace-perso.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { EspacePersoComponent } from './espace-perso/espace-perso.component';
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    FontAwesomeModule
   ]
 })
 export class AdminModule { }

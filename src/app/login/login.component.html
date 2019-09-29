@@ -1,6 +1,6 @@
 <div class="body">
 
-  <img id="cefircIMG" src="../../assets/logo-cefirc-igta-centre-formation.svg" alt="">
+  
 
   <div class='switch'>
     <div [@openClose]="open == false ? 'btnBeforeSwitch' : 'btnAfterSwitch'">
@@ -13,18 +13,18 @@
 
   <form class="container" #formulaire="ngForm" (ngSubmit)="submitted(formulaire)">
 
-    <div [ngClass]="open == false ? 'none' : 'do' ">
+    <div [ngClass]="open == false ? 'none' : 'do ' ">
       <!--animated fadeIn-->
 
       <label for="username"><b></b></label>
-      <input id="user" type="text" placeholder="Nom d'Utilisateur" name="userName" pattern="^[a-zA-Z]+$"
+      <input id="user" type="text" placeholder="Nom d'Utilisateur" name="userName"
         [(ngModel)]="userName" #user="ngModel" required>
 
       <br />
 
       <label for="password"></label>
       <input id="mdp" type="{{type}}" placeholder="Mot de Passe" name="password" value=""
-        pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" [(ngModel)]="password" #pass="ngModel" required>
+         [(ngModel)]="password" #pass="ngModel" required>
       <input id="check" type="checkbox" (click)="showed()">
 
       <br />

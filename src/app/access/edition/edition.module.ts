@@ -12,8 +12,9 @@ import { DragDropComponent } from './slides/drag-drop/drag-drop.component';
 import { TitreComponent } from './slides/titre/titre.component';
 import { TextImagesComponent } from './slides/text-images/text-images.component';
 import { TextComponent } from './slides/text/text.component';
-
-
+/*
+import {MatInputModule} from '@angular/material/input';
+*/
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { TextComponent } from './slides/text/text.component';
   ],
   imports: [
     CommonModule,
-    EditionRoutingModule
+    EditionRoutingModule,
   ]
 })
 export class EditionModule { }

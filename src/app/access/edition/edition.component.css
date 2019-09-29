@@ -1,0 +1,329 @@
+@import "~bootstrap/dist/css/bootstrap.css"; 
+@import "~@fortawesome/fontawesome-free/css/all.css"; 
+
+.wrapper{
+    margin-left:5%;
+    margin-right:5%;
+}
+.card{
+    border: none;
+    background-color: transparent!important;
+}
+
+.card img{
+    cursor:pointer;
+}
+
+
+.edit{
+    display:flex;
+    padding-top:10px;
+    padding-bottom:10px;
+    justify-content: center;
+    background:#D6D6D6;
+}
+
+.padding-0{
+    padding-top:0;
+    padding-bottom:0;
+    padding:0;
+    margin:0;
+}
+
+.edit i{
+   font-size:1.7em;
+   margin-left:15px;
+   cursor:pointer;
+}
+
+.menu{
+    position:relative;
+    width:100%;
+}
+
+.barrerecherche{
+    position:absolute!important;
+    right:-15px!important;
+    bottom:0px;
+}
+
+.card-body{
+
+    padding:0rem;
+}
+
+.espacepersonnel{
+    background:#D6D6D6;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding-top:10px;
+    padding-bottom:7px;
+    color:white;
+    z-index:100
+}
+
+.espacepersonnelnotselected{
+    background-color:#5D5D5D;
+    border-top-left-radius: 50px;
+    padding-top:10px;
+    padding-bottom:7px;
+    cursor:pointer;
+}
+
+.espacepersonnel h4{
+   cursor:pointer;
+}
+
+.espacecommun{
+    background-color:#5D5D5D;
+    padding-top:10px;
+    padding-bottom:7px;
+    border-top-right-radius: 50px;
+    margin-left:-40px;
+    z-index:1;
+    cursor:pointer;
+  
+}
+
+.espacecommunnotselected{
+    background:#D6D6D6;
+    padding-top:10px;
+    padding-bottom:7px;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    margin-left:-40px;
+    z-index:1;
+    cursor:pointer;
+    color:white;
+}
+
+.formation1{
+    display:flex;
+    flex-direction: column;
+}
+
+.formation1-nom{
+    background-color:#5D5D5D;
+    display:flex;
+    position:relative;
+    width:100%;
+    justify-content: center;
+   
+}
+
+.formation1-nom i{
+    padding:12px 0px 0px 0px;
+    color:white;
+    position:absolute;
+    right:5px;
+    font-size:1.6em;
+    cursor: pointer;
+}
+
+.formation1-nom p{
+    padding:10px 0px 0px 0px;
+    color:white;
+    
+}
+
+
+.ajoutFormation{
+    background-color:#D6D6D6;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:23vh;
+    flex-direction: column;
+}
+
+.ajoutFormation img{
+    background-color: #B6B6B6;
+    padding:5%;
+    border-radius:50%;
+}
+
+.ajoutScenario{
+    align-self: center;
+    margin-left:3%;
+}
+
+.ajoutScenario img{
+    background-color: #B6B6B6;
+    padding:5%;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+.ajoutFormation img {
+  cursor:pointer;
+}
+
+.next{
+    display:flex;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+    cursor:pointer;
+}
+
+
+
+.previous{
+    display:flex;
+    align-content: center;
+    align-items: center;
+    cursor:pointer;
+}
+
+.previous i{
+    font-size:5em;
+    color:#a8a8a8;
+}
+
+.next i{
+    font-size:4.5em;
+    color:#a8a8a8;
+}
+
+.menu{
+    display:flex;
+}
+
+/** SCENARIO **/
+
+
+.scenario{
+    background-color:#D6D6D6;
+    display:flex;
+    border-top-right-radius: 60px;
+    position:relative;
+    padding-left:1.5%;
+}
+
+.scenario-body{
+    display:flex;
+    flex-direction: column;
+}
+
+.scenario-nom{
+    display:block;
+    background-color:#ffffff;
+}
+
+.scenario-nom p {
+    padding-top:10px;
+    font-size:.8em;
+}
+
+
+.scenario-edit{
+    display:flex;
+    justify-content: center;
+    background-color:#5D5D5D;
+}
+
+.scenario-edit i{
+    font-size:1.3em;
+    margin-left:10px;
+    padding-top:3px;
+    padding-bottom:3px;
+}
+
+.close{
+    cursor:pointer;
+    position:absolute;
+    left:5px;
+    top:5px;
+}
+
+.close i {
+    font-size:1.4em;
+    color:#a8a8a8;
+    transition:.5s;
+}
+
+.close i:hover {
+    color:black;
+    transition:.5s;
+}
+
+
+.scenario .card{
+    max-width:10%;
+    margin-left:20px;
+    margin-top:1.5%;
+}
+
+.nomFormationScenario{
+    background-color: #B6B6B6;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    width:50%;
+   
+}
+
+.nomFormationScenario p{
+    padding-top:1%;
+    padding-bottom:1%;
+    font-weight:600;
+    color:#707070;
+}
+
+.scenario-next{
+    align-self: center;
+    cursor:pointer;
+    position:absolute;
+    right:5px;
+}
+
+.scenario-next i{
+    font-size:4.5em;
+    color:#a8a8a8;
+}
+
+
+/** FICHE **/
+
+.fiche{
+    background-color:#D6D6D6;
+    display:flex;
+    border-top-right-radius: 60px;
+    position:relative;
+    padding-left:1.5%;
+}
+
+.fiche .card{
+    max-width:10%;
+    margin-left:20px;
+    margin-top:1.5%;
+}
+
+
+
+.fiche-body{
+    display:flex;
+    flex-direction: column;
+}
+
+.fiche-nom{
+    display:block;
+    background-color:#ffffff;
+}
+
+.fiche-nom p {
+    padding-top:10px;
+    font-size:.8em;
+}
+
+.fiche-edit{
+    display:flex;
+    justify-content: center;
+    background-color:#5D5D5D;
+}
+
+.fiche-edit i{
+    font-size:1.3em;
+    margin-left:10px;
+    padding-top:3px;
+    padding-bottom:3px;
+}

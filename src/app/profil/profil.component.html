@@ -1,1 +1,62 @@
-<p>profil works!</p>
+<div id="listeContainer">
+    <div id="listNav">
+        <ul>
+            <li class='listSelected'>FORMATEURS</li>
+            <li></li>
+        </ul>
+    </div>
+    <div id="listContent">
+        <div id="mainContent">
+            <div id="profilPic">
+                <div id="profilPicBack"></div>
+                <div id="picFilter"><i class="fas fa-plus-circle"></i></div>
+            </div>
+            <ul>
+                <li><p>Nom</p><input value='Martin'></li>
+                <li><p>Prénom</p><input value="Choose"></li>
+                <li><p>Email</p><input value="MartinChoose@gmail.com"></li>
+                <li><p>Téléphone</p><input value="06.13.14.63.59"></li>
+                <li><p>Spécialité</p><input value="Spécialité"></li>
+                <li id="createPassword"><p>Mot de passe</p>
+                    <div>
+                        <input type="password" value="**********">
+                        <p>Confirmer</p>
+                        <input type="password" value="**********">
+                    </div>
+                </li>
+                <li id="Permissions"><p>Permissions</p>
+                    <div>
+                        <p>
+                            <label for="Administrateur">Administrateur</label>
+                            <input type="checkbox" disabled id="Administrateur" name="Administrateur">
+                        </p>
+                        <p>
+                            <label for="Formateur">Formateur</label>
+                            <input type="checkbox" disabled checked id="Formateur" name="Formateur">
+                        </p>
+                        <p>
+                            <label for="Aucun">Aucun</label>
+                            <input type="checkbox" disabled id="Aucun" name="Aucun">
+                        
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="ModalButtons">
+            <div><a href="../access"><span>Annuler la modification</span></a></div>
+            <div><a href="../access"><span>Confirmer la modification</span></a></div>
+        </div>
+        <div id="modal">
+            <div id="msg">
+                <i class="fas fa-exclamation-triangle" id="delWarn"></i>
+                <p>DONNER LES DROIT ADMINISTRATEUR?</p>
+            </div>
+            <div class="ModalButtons">
+                
+                <div><span id="annuler">Annuler</span></div>
+                <div><span id="confirmer">Confirmer</span></div>
+            </div>
+        </div>
+    </div>
+</div>
