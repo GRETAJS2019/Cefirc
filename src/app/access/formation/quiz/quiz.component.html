@@ -2,68 +2,18 @@
 <h1 >QCM 1er jour</h1>  
 <div class='questionContainer'>    
     <div class="questions">  
-        <div class="row cadre">
-            <h2 class="col-md-12">Quel niveau est requis pour pouvoir signer les permis ?</h2>
-            <div class="col-md-6">
-                <input type="checkbox" name="Niveau 1">
-                <label>Niveau 1</label>
-            </div> 
-            <input class="col-md-6" type="checkbox" name="Niveau 2">            
+
+        <div  class="row cadre" *ngFor="let question of questions">
+                <h2 class="col-md-12">{{question.question}}</h2>
+                <div class="col-md-6" *ngFor="let reponse of question.reponse">
+                    <span class="reponse" ><i class="far fa-square">   {{reponse.text}}</i></span>
+                    
+                </div>          
         </div>
 
-        <div class="row cadre">
-            <h2 class="col-md-12">Quels sont les 4 principaux permis ou autorisations qui sont  susceptibles de vous être demandés ?</h2>
-            <input class="col-md-6" type="checkbox" name="Permis électrique">
-            <input class="col-md-6" type="checkbox" name="Permis de sortir">
-            <input class="col-md-6" type="checkbox" name="Permis de fouille">
-            <input class="col-md-6" type="checkbox" name="Permis de consignation">
-            <input class="col-md-6" type="checkbox" name="Permis de travail">
-            <input class="col-md-6" type="checkbox" name="Permis de feu">
-            <input class="col-md-6" type="checkbox" name="Permis de fumer">
-            <input class="col-md-6" type="checkbox" name="Permis de pénétrer">
-        </div>
-
-        <div class="row cadre">
-            <h2 class="col-md-12">Pour des travaux de très courte durée (moins d’1 heure),peut-on travailler sans permis ou autorisation ?</h2>
-            <input class="col-md-6" type="checkbox" name="Oui">
-            <input class="col-md-6" type="checkbox" name="Non">
-        </div>
-
-        <div class="row cadre">
-            <h2 class="col-md-12">Doit-on demander une autorisation d’accès ?</h2>
-            <input class="col-md-6" type="checkbox" name="Pour le personnel.">
-            <input class="col-md-6" type="checkbox" name="Pour les véhicules et engins.">
-            <input class="col-md-6" type="checkbox" name="Pour les coffres, caisses à outils…">
-            <input class="col-md-6" type="checkbox" name="Pour un poste à souder ou groupe électrogène quelque soit le site">
-        </div>
-
-        <div class="row cadre">
-            <h2 class="col-md-12">Quelles sont vos obligations en tant qu’opérateur ?</h2>
-            <input class="col-md-6" type="checkbox" name="Respecter les consignes de votre employeur.">
-            <input class="col-md-6" type="checkbox" name="Respecter les consignes de l’Entreprise Utilisatrice.">
-            <input class="col-md-6" type="checkbox" name="Faire vous-même les visites de conformité réglementaire du matériel mis à votre disposition.">
-            <input class="col-md-6" type="checkbox" name="Appliquer votre droit de retrait en cas de danger grave et imminent.">
-            <input class="col-md-6" type="checkbox" name="Acheter des EPI adaptés.">
-            <input class="col-md-6" type="checkbox" name="Prendre l’initiative de faire contrôler régulièrement son matériel par un organisme officiel.">
-        </div>
-
-        <div class="row cadre">
-            <h2 class="col-md-12">On m’a fourni la formation et les EPI nécessaires, dont 
-                le harnais complet, aucune protection collective ne pouvait être mise en place. Je ne m’accroche pas et tombe.
-                Qui est le responsable ?</h2>
-            <input class="col-md-6" type="checkbox" name="Mon responsable">
-            <input class="col-md-6" type="checkbox" name="Moi">
-            <input class="col-md-6" type="checkbox" name="Le responsable EU">
-        </div>
-
-        <div class="row cadre">
-            <h2 class="col-md-12">En cas de déclenchement d’une sirène d’évacuation incendie, je dois ?</h2>
-            <input class="col-md-6" type="checkbox" name="Rentrer chez moi le plus rapidement possible.">
-            <input class="col-md-6" type="checkbox" name="Mettre en sécurité mon poste de travail.">
-            <input class="col-md-6" type="checkbox" name="Rejoindre un point de rassemblement.">
-            <input class="col-md-6" type="checkbox" name="Aller chercher des extincteurs.">
-        </div>
     </div>
 </div>
-<button id="envoiTablette"><i class="fas fa-share"></i><i class="fas fa-mobile-alt"></i></button>
-<a [routerLink]="['/access/formation/resultat']"> <button id="reponse">Reponse</button> </a>
+<div id="btnBas">
+        <button (click)="clickTablette()" class="buttonCefirc" id="envoiTablette"><i [ngClass]="statusBtnTab ? 'fas fa-spinner fa-spin' : 'fas fa-share' "></i><i [ngClass]="statusBtnTab ? '' : 'fas fa-mobile-alt' "></i></button>
+        <a [routerLink]="['/access/formation/resultat']"> <button class="buttonCefirc" id="reponse">Reponse</button> </a>
+</div>
