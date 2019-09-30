@@ -106,4 +106,32 @@
     background-color:white;
 }
 
+/** QUIZZ **/
+
+.ajoutQuizz{
+    position:fixed;
+    bottom:3%;
+    right:3%;
+    cursor:pointer;
+    display:flex;
+    justify-content: space-around;
+}
+
+.ajoutQuizz i{
+  font-size:3em;
+  color:#d6d6d6;
+}
+
+
+.ajoutQuizz i:hover{
+   transform:rotate(360deg);
+   transition:500ms ease-in-out
+}
+
+.ajoutQuizz p {
+    color:#d6d6d6;
+    padding-top:10%;
+    padding-right:15%;
+    font-weight: 700;
+}
 

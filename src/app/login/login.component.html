@@ -25,12 +25,12 @@
       <label for="password"></label>
       <input id="mdp" type="{{type}}" placeholder="Mot de Passe" name="password" value=""
          [(ngModel)]="password" #pass="ngModel" required>
-      <input id="check" type="checkbox" (click)="showed()">
+     <!--  <input id="check" type="checkbox" (click)="showed()">-->
+     <mat-checkbox (click)="showed()"></mat-checkbox>
 
       <br />
 
       <p>{{errorMessage}}</p>
-
 
     </div>
 
