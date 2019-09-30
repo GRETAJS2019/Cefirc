@@ -1,16 +1,19 @@
 @import "~@fortawesome/fontawesome-free/css/all.css";
 @import "~bootstrap/dist/css/bootstrap.css"; 
 
-
 nav {
-    background: url(../assets/images/Logo_Cefirc.png) no-repeat;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+nav img {
     background-size: 8em;
-    background-position-y: 4%;
-    background-position-x: 4%;
+    margin-left: 2%;
     height: 50px;
     margin-top: 20px;
-    display: flex;
-    flex-flow: row-reverse;
+    display: inline-block;
+    cursor: pointer;
 }
 
 
@@ -24,7 +27,7 @@ body{
     width: 8vw;
     margin-right: 1%;
     border: none;
-    
+    margin-top:20px; 
 }
 
 .btn-default:hover{
