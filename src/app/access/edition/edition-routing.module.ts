@@ -15,21 +15,19 @@ import { TitreComponent } from './slides/titre/titre.component';
 
 
 const routes: Routes = [
-  {path:'', component:EditionComponent,
-  children:[
-    {path:'enchainements', component:EnchainementsComponent},
-    {path:'profile', component:ProfileComponent},
-    {path:'creation', component:CreationComponent},
-    // FORMATIONS
-    {path:'formation', component:FormationComponent},
-    {path:'listeformation', component:ListeFormationComponent},
-    {path:'listeperso', component:ListeFormationPersoComponent},
-    // SLIDES
-    {path:'dragdrop', component:DragDropComponent},
-    {path:'text', component:TextComponent},
-    {path:'textimage', component:TextImagesComponent},
-    {path:'titre', component:TitreComponent}
-  ]}
+  {path:'', component:EditionComponent},
+  {path:'enchainements', component:EnchainementsComponent},
+  {path:'profile', component:ProfileComponent},
+  {path:'creation', component:CreationComponent},
+  // FORMATIONS
+  {path:'formation', component:FormationComponent},
+  {path:'listeformation', component:ListeFormationComponent},
+  {path:'listeperso', component:ListeFormationPersoComponent},
+  // SLIDES
+  {path:'dragdrop', component:DragDropComponent},
+  {path:'text', component:TextComponent},
+  {path:'textimage', component:TextImagesComponent},
+  {path:'titre', component:TitreComponent}
 ];
 
 @NgModule({
