@@ -102,14 +102,15 @@ export class EnchainnementComponent implements OnInit {
     // record new position
     this.endX = e.pointerPosition.x;
     this.endY = e.pointerPosition.y;
-    console.log(this.endX);
 
-   // this.renderer.setStyle(e.source.element.nativeElement, 'display', 'block');
-   // this.renderer.setStyle(e.source.element.nativeElement, 'display', 'block');
-   const classe = this.renderer.addClass(e.source.element.nativeElement, 'aa');
-    //this.renderer.setStyle(e.source.element.nativeElement, 'background-color', 'green');
-    // logic to set startX and startY
-    // TRYING TO CHANGE CARD BORDER COLOR IF this.endX - this.startX > some number
+    console.log("endX",this.endX)
+    console.log("endY",this.endY)
+    if(!((this.endX > 0 && this.endX < 176) && (this.endY > 178 && this.endY < 525))){
+      const classe = this.renderer.addClass(e.source.element.nativeElement, 'aa');
+    }else{
+      this.renderer.removeClass(e.source.element.nativeElement,'aa')
+    }
+   
 }
 
 }

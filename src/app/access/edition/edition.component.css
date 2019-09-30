@@ -1,5 +1,25 @@
 @import "~bootstrap/dist/css/bootstrap.css"; 
 @import "~@fortawesome/fontawesome-free/css/all.css"; 
+::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: white !important;
+   }
+  
+   ::ng-deep.mat-form-field-underline {
+    /*change color of underline*/
+    background-color: white !important;
+  } 
+  
+  ::ng-deep.mat-form-field-ripple {
+   /*change color of underline when focused*/
+   background-color: white !important;;
+  }
+
+    mat-form-field {
+        width:100%;
+        color:white;
+    }
+
 
 .wrapper{
     margin-left:5%;
@@ -13,7 +33,6 @@
 .card img{
     cursor:pointer;
 }
-
 
 .edit{
     display:flex;
@@ -326,4 +345,33 @@
     margin-left:10px;
     padding-top:3px;
     padding-bottom:3px;
+}
+
+/** QUIZZ **/
+
+.ajoutQuizz{
+    position:fixed;
+    bottom:3%;
+    right:3%;
+    cursor:pointer;
+    display:flex;
+    justify-content: space-around;
+}
+
+.ajoutQuizz i{
+  font-size:3em;
+  color:#d6d6d6;
+}
+
+
+.ajoutQuizz i:hover{
+   transform:rotate(360deg);
+   transition:500ms ease-in-out
+}
+
+.ajoutQuizz p {
+    color:#d6d6d6;
+    padding-top:10%;
+    padding-right:15%;
+    font-weight: 700;
 }
