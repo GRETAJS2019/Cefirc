@@ -4,7 +4,6 @@
     </div>
 </div>
 
-
 <div class="wrapper mt-5 ">
     <div class="menu">
         <div [@openClose]="espacecommun == false ? 'espacepersonnel' : 'notespacepersonnel'"
@@ -20,10 +19,12 @@
             </a>
         </div>
         <div class="col-3 barrerecherche">
-            <input type="text" class="form-control" placeholder="Rechercher">
+                <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Rechercher">
+               </mat-form-field>
+          <!--   <input type="text" class="form-control" placeholder="Rechercher">-->
         </div>
     </div>
-
 
 
     <div class="row mt-5" style="justify-content: space-between">
@@ -158,9 +159,7 @@
                                 <i class="fas fa-copy"></i>
                             </div>
                         </div>
-    
                     </div>
-    
                 </div>
             </div>
     
@@ -280,7 +279,7 @@
 
     <!--      SCENARIO [@openClose]="scenarioopened == true ? 'openscenario' : 'closescenario'" -->
 
-    <div class="scenario-formation"  [@openClose]="scenarioopened == true ? 'openscenario' : 'closescenario'">
+    <div class="scenario-formation" *ngIf="!supprimer"  [@openClose]="scenarioopened == true ? 'openscenario' : 'closescenario'">
 
         <div class="scenario mt-3 pb-3 pt-3" >
             <div class="close" (click)=" scenarioficheclosed()">
@@ -356,7 +355,7 @@
 
                     <!-- FICHE -->
 
-    <div class="fiche-formation" [@openClose]="ficheopened == true ? 'openfiche' : 'closefiche'">
+    <div class="fiche-formation" *ngIf="!supprimer" [@openClose]="ficheopened == true ? 'openfiche' : 'closefiche'">
             <div class="fiche mt-3 pb-3 pt-3">
                     <div class="close" (click)="ficheopened = false">
                             <i class="fas fa-times-circle"></i>
@@ -429,4 +428,8 @@
             </div>
         </div>
 </div>
+<div class="ajoutQuizz" *ngIf="scenarioopened">
+       <p>Quiz</p>   <i class="fas fa-cube"></i>
+</div>
+
 <router-outlet></router-outlet>

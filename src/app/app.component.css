@@ -1,14 +1,54 @@
+@import "~@fortawesome/fontawesome-free/css/all.css";
+@import "~bootstrap/dist/css/bootstrap.css"; 
+
 nav {
-    background: url(../assets/images/Logo_Cefirc.png) no-repeat;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+nav img {
     background-size: 8em;
-    background-position-y: 4%;
-    background-position-x: 4%;
+    margin-left: 2%;
     height: 50px;
     margin-top: 20px;
-
+    display: inline-block;
+    cursor: pointer;
 }
+
 
 body{
     background-color: #283C83;
 }
 
+
+.btn, .btn-default, .btn-lg{
+    background-color: rgb(29, 43, 100);
+    width: 8vw;
+    margin-right: 1%;
+    border: none;
+    margin-top:20px; 
+}
+
+.btn-default:hover{
+    background-color: rgb(29, 43, 100);
+}
+
+
+a {
+    text-decoration: none;
+    padding: 5%;
+    color: #D6D6D6;
+}
+
+a:hover {
+    color: white;
+}
+
+.fa-arrow-circle-left{
+    color: #D6D6D6;
+}
+
+.fa-arrow-circle-left:hover{
+    color: white;
+}
